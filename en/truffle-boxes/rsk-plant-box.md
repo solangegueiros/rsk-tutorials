@@ -1,7 +1,7 @@
 # Plant box - a complete dApp built with Truffle box template rsk-plant-box
 
 In this tutorial, I will show you step-by-step how to use the Truffle box [rsk-plant-box](https://github.com/rsksmart/rsk-plant-box), 
-which comes with everything you need to create a complete dApp - descentralized application on RSK networks. 
+which comes with everything you need to create a complete dApp - decentralized application on RSK networks. 
 It includes network configurations for Mainnet, Testnet, local node (regtest) and also an user interface to interact with the smart contract.
 
 > It was inspired by [Truffle pet shop box](https://www.trufflesuite.com/boxes/pet-shop). 
@@ -85,7 +85,7 @@ Take a look at the smart contract `PlantShop.sol`. You can check it out in folde
 
 This smart contract has:
 
-* A variable `buyers` to store an array with 16 posisions to store addresses
+* A variable `buyers` to store an array with 16 positions to store addresses
 * A function `getBuyers` to return the list of addresses stored at variable `buyers`
 * A function `buy` to update an address at variable `buyers`, in the number of position sent as parameter
 
@@ -376,7 +376,7 @@ while others continue with the zero address, which means that plants are still a
 
 # Using RSK networks
 
-Truffle makes developing on RSK easier because we can configure custom networks for RSK. 
+Truffle makes developing on RSK easier because we can configure custom networks for RSK.
 This Truffle box is already configured to connect to three RSK networks:
 
 1. regtest (local node)
@@ -393,7 +393,8 @@ To use the Truffle box connected to a local node, go to the tutorial [how to use
 
 **RSK mainnet**
 
-Follow the same instructions, just replacing `testnet` to `mainnet`. Some differences will be explained too.
+Follow the same instructions, just replacing `testnet` to `mainnet`. 
+Some differences will be explained too.
 
 # RSK testnet
 
@@ -418,7 +419,6 @@ Select the RSK Network in the web wallet.
 
 ![wallets](../../images/rsk-plant-box/image-06.png)
 
-
 Take a look `truffle-config.js` file to realize that we are using `HDWalletProvider` with RSK Networks derivations path:
 - RSK Testnet dpath: `m/44’/37310’/0’/0`
 - RSK Mainnet dpath: `m/44’/137’/0’/0`
@@ -427,7 +427,7 @@ For more information, check [RSKIP57](https://github.com/rsksmart/RSKIPs/blob/ma
 
 ## Update .secret file
 
-After create your wallet, copy your mnemonic.
+After creating your wallet, copy your mnemonic.
 
 Paste the wallet mnemonic in the file `.secret`, located in the folder project, and save it.
 
@@ -437,21 +437,25 @@ Paste the wallet mnemonic in the file `.secret`, located in the folder project, 
 
 Run the development console for any RSK network.
 
-**RSK Testnet or Mainnet**
+<!-- tabs:start -->
+#### ** RSK Testnet **
 
 ```shell
-# Console for Testnet
 truffle console --network testnet
+```
 
-# Console for Mainnet
+#### ** RSK Mainnet **
+
+```shell
 truffle console --network mainnet
 ```
+<!-- tabs:end -->
 
 This action instructs Truffle to connect to an RSK public node and grants it permission to control the accounts created with your mnemonic through the `HD wallet provider`.
 
 Let's connect to the Testnet network:
 
-```windows-command-prompt
+```shell
 C:\RSK\rsk-plant>truffle console --network testnet
 truffle(testnet)>  
 ```
@@ -476,16 +480,17 @@ To get the network ID, run this command:
 (await web3.eth.net.getId()).toString()
 ```
 
-List of network IDs:
-- mainnet: 30
-- testnet: 31
-- regtest (local node): 33
+> [!NOTE]
+> List of network IDs:
+> - mainnet: 30
+> - testnet: 31
+> - regtest (local node): 33
 
 Check it out the last steps in this image:
 
 ![connect to rsk network](../../images/rsk-plant-box/image-07.png)
 
-You can verify that I got the last block twice, and the block number inscreased, so we conclude that the connection is ok.
+You can verify that I got the last block twice, and the block number increased, so we conclude that the connection is ok.
 
 ## Get your accounts 
 
@@ -493,7 +498,10 @@ You can verify that I got the last block twice, and the block number inscreased,
 const accounts = await web3.eth.getAccounts()
 ```
 
-Don’t worry about the `undefined` return, it is ok. See the addresses after it by entering the command below:
+> [!NOTE]
+> Don't worry about the `undefined` return, it is ok. 
+
+See the addresses after it by entering the command below:
 
 ```javascript
 accounts
@@ -508,58 +516,63 @@ accounts[1]
 
 Copy the first account address, `accounts[0]`, to get some tR-BTCs later.
 
-Exit the Truffle console:
+> [!ATTENTION]
+> TODO - Image, check which is the accounts[0]
 
-```shell
-.exit
+## Check balance
+
+To check the balance of account[0], for example, run this command in Truffle console:
+
+```javascript
+(await web3.eth.getBalance(accounts[0])).toString()
 ```
+
+If the balance is 0, your need to get some tR-BTC to pay gas fees,
+which will be used to publish smart contracts and interact with them.
+We shall obtain some tR-BTC in the next step.
+
 
 ## Get R-BTC
 
 The Smart Bitcoin (R-BTC) is used to pay for the execution of transactions in RSK.
 
-**Mainnet**
+<!-- tabs:start -->
+#### ** RSK Testnet **
 
-For the RSK Mainnet, get R-BTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
-
-**Testnet**
-
-For the RSK Testnet, get tR-BTC from [faucet](https://faucet.testnet.rsk.co/).
+Get tR-BTC from [faucet](https://faucet.testnet.rsk.co/).
 
 You can get more explanations on how to do it in 
 [RSK faucet](./en/wallets/wallet-rsk-faucet.md) page.
 
+#### ** RSK Mainnet **
+
+For the RSK Mainnet, get R-BTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
+
+<!-- tabs:end -->
+
+
+## Recheck balance
+
+To check balance again, run this command in the Truffle console:
+
+```javascript
+(await web3.eth.getBalance(accounts[0])).toString()
+```
+
+Great! Now I have 50000000000000000, which means that I have 0.05 tR-BTC with 18 decimal place of precision.
+
+## Exit Truffle console
+
+In the Truffle console, enter this command to exit the terminal:
+
+```shell
+.exit
+```
+
 ## Setup the gas price
 
-**Gas** is the internal pricing for running a transaction or contract. When you send tokens, interact with a contract, send R-BTC, or do anything else on the blockchain, you must pay for that computation. That payment is calculated as gas. In RSK, this is paid in **R-BTC**.
-The **minimumGasPrice** is written in the block header by miners and establishes the minimum gas price that a transaction should have in order to be included in that block.
-
-To update the **minimumGasPrice** in our project, run this query using cURL:
-
-**Testnet**
-
-```shell
-curl https://public-node.testnet.rsk.co/ -X POST -H "Content-Type: application/json" \
-    --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["latest",false],"id":1}' \
-    > .minimum-gas-price-testnet.json
-```
-
-**Mainnet**
-
-```shell
-curl https://public-node.rsk.co/ -X POST -H "Content-Type: application/json" \
-    --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["latest",false],"id":1}' \
-    > .minimum-gas-price-mainnet.json
-```
-
-This query saved the details of latest block to 
-file .minimum-gas-price-testnet.json 
-or .minimum-gas-price-mainnet.json, respectively.
-
-In the `truffle-config.js`, we are reading the parameter `minimumGasPrice` in each json file.
-
-For more information about the **Gas** and **minimumGasPrice** please go to the [gas page](https://developers.rsk.co/rsk/rbtc/gas/ "Gas - RSK Developers Portal").
-
+To update the **minimumGasPrice** in our project follow the tutorial 
+[setup the gas price to use with Truffle](./en/truffle/truffle-rsk-gas-price.md). 
 
 # Deploy the smart contract on RSK network
 
@@ -570,28 +583,34 @@ We will do it running the below commands directly in the terminal,
 without using the Truffle console, to show you this alternative.
 
 To use Testnet or Mainnet, you need to specify this using the parameter `-- network`. 
-On any of the networks, run this commands in a terminal (not in Truffle console).
+On any of the networks, run this command in a terminal (not in Truffle console).
+
+<!-- tabs:start -->
+#### ** RSK Testnet **
 
 ```shell
-# Migrate in Testnet
 truffle migrate --network testnet
+```
 
-# Migrate in Mainnet
+#### ** RSK Mainnet **
+
+```shell
 truffle migrate --network mainnet
 ```
 
-I will do it on testnet:
+<!-- tabs:end -->
 
-```shell
-truffle migrate --network testnet
-```
+I will do it on testnet.
 
 The migrate process in a real blockchain takes more time, because Truffle creates some transactions which need to be mined on the blockchain.
 
-Congratulations!
+Wait a few minutes… 
+
+:tada: Congratulations! :tada:
 
 The plant shop is now published on the RSK network.
 
+> [!ATTENTION]
 > Make sure you have enough tR-BTC to deploy it.
 
 ## View the deployed contract in the Testnet explorer
@@ -604,12 +623,13 @@ For example, [0x3A6Dd83F76eCceA654bDc4ea29170B8A34A9e270](https://explorer.testn
 
 ![explorer contract address](../../images/rsk-plant-box/image-09.png)
 
-If you would like to have the code source verified, uou can do it in the tab `Code` in the explorer.
+If you would like to have the code source verified, you can do it in the tab `Code` in the explorer.
 
 ![contract code verified on explorer](../../images/rsk-plant-box/image-10.png)
 
 # Interact with the deployed contract on RSK network
 
+> [!ATTENTION]
 > Make sure you had deployed the smart contract before executing this part.
 
 Do the same steps which was done before:
@@ -625,8 +645,10 @@ Do the same steps which was done before:
 
 ## Truffle console on testnet
 
-The next commands will run inside the Truffle console, 
-connected to the network of your choice. 
+> [!NOTE]
+> The next commands will run inside the Truffle console,
+> connected to the network of your choice. 
+
 In my case, it is testnet:
 
 ```shell
@@ -765,7 +787,7 @@ This way, you can take this knowledge and apply it to your own front-end develop
 
 ## Select the network
 
-To interacting with the dapp in a browser, the easy way is using a web3 wallet injected in the browser.  
+To interact with the dapp in a browser, the easy way is using a web3 wallet injected in the browser.  
 
 Select the same network which you ran the migrate command: 
 - Nifty: select in the dropdown list
@@ -780,7 +802,7 @@ This shipped with the plant-shop Truffle Box, but let's take a look at how it wo
 
 Now we're ready to use our dapp!
 
-Outside the Truffle console, run the liteserver development server for front-end hot reloading. 
+Outside the Truffle console, in a terminal, run the liteserver development server for front-end hot reloading. 
 Smart contract changes must be manually recompiled and migrated.
 
 Start the local web server:
@@ -800,9 +822,9 @@ Choose the account, click `next` and `connect`.
 
 ![metamask connection](../../images/rsk-plant-box/image-27.png)
 
-> If you change the network after the page appear in the screen, reload the browser to ensure the green button showing connected is active.
+> If you change the network after the page appear on the screen, reload the browser to ensure the green button showing connected is active.
 
-You can realize that some plants show the first characters of an account, which I bought them before, using thr Truffle console.
+You can realize that some plants show the first characters of an account, which I bought them before, using the Truffle console.
 
 ![RSK plant garden on testnet](../../images/rsk-plant-box/image-28.png)
 
@@ -819,7 +841,7 @@ I will buy the coffee plant:
 
 ![buy a plant in the dApp](../../images/rsk-plant-box/image-29.png)
 
-After the transaction is confirmed, you'll see the button next to the choosed plant change to show the first characters of the wallet that got the plant and become disabled, just as we specified, because the plant has now been acquired.
+After the transaction is confirmed, you'll see the button next to the chosen plant change to show the first characters of the wallet that got the plant and become disabled, just as we specified, because the plant has now been acquired.
 
 ![coffee bought](../../images/rsk-plant-box/image-30.png)
 

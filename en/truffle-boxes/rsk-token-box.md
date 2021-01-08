@@ -440,7 +440,7 @@ We need to do some tasks:
 - Get tR-BTC
 - Setup RSK network gas price
 - Connect to an RSK network
-- Deploy in the network of your choose
+- Deploy in the network of your choice
 
 ## Create a wallet
 
@@ -537,6 +537,7 @@ Let’s connect to the Testnet network:
 C:\RSK\rsk-token>truffle console --network testnet
 truffle(testnet)>  
 ```
+
 # Test the connection to RSK network
 
 On any of the networks, run this commands in the Truffle console:

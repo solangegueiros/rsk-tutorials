@@ -12,49 +12,16 @@ Create an account.
 
 Write down your seed phrase, or mnemonic, or backup phrase (all these terms mean the same), with 12 words. This is used to recover your account, in case you lose your password.
 
-The seed phrase is the most important thing in a wallet / account!
+> [!ATTENTION]
+> **The seed phrase is the most important part in a wallet / account!**
+> 
+> If you lost your seed phrase, you cann't recover your wallet.
 
-## Configure to connect to RSK testnet
+## Configure to connect to RSK
 
-- Go to networks
-- Custom RPC
+### Testnet
+Go to [Connect Metamask to RSK testnet](./en/wallets/wallet-metamask-rsk-testnet.md)
 
-![networks - custom RPC](../../images/wallet-metamask/image-01.png)
+### Mainnet
 
-- Network Name
-
-  `RSK Testnet`
-- New RPC URL
-
-  [`https://public-node.testnet.rsk.co`](https://public-node.testnet.rsk.co)
-- ChainID (optional)
-
-  `31`
-- Symbol (optional)
-
-  `tR-BTC`
-- Block Explorer URL (optional)
-
-  [`https://explorer.testnet.rsk.co`](https://explorer.testnet.rsk.co)
-
-
-![RSK Testnet configuration](../../images/wallet-metamask/image-02.png)
-
-> If you had problems with ChainID use 0x1f (31 in hexadecimal)
-
-## Select RSK testnet
-
-After configuring it, select the RSK Tesnet.
-
-## Get tR-BTC
-
-Copy your address from Metamask.
-
-![Copy address from Metamask](../../images/wallet-metamask/image-03.png)
-
-Now you can follow the instructions to get some [Testnet R-BTC](./en/wallets/wallet-rsk-faucet.md). 
-
-When you come back, you will have 0.05 tR-BTC, like me!
-
-![R-BTCs at Metamask wallet](../../images/wallet-metamask/image-06.png)
-
+ToDo
