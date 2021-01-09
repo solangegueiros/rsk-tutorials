@@ -7,7 +7,7 @@ Sidebar EN
   * [How to create your first frontend for smart contracts](/en/frontend/frontend-web3-injected/)
   * [How to create a frontend for smart contracts using web3 connected to a local node](/en/frontend/frontend-web3-local/)
 
-* [Truffle tutorials](en/truffle/)
+* [Truffle tutorials](en/truffle/readme.md)
   * [Pre requisites](en/truffle/truffle-project-prerequisites.md)
   * [On Regtest](en/truffle/truffle-regtest.md)
   * [Gas Price on Truffle](en/truffle/truffle-rsk-gas-price.md)
