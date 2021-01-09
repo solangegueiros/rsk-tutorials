@@ -1,8 +1,9 @@
 * [Home](/en/)
 
-* [Ethereum Devs](en/ethereum-devs/)
+Sidebar EN
+* [Ethereum Devs](en/ethereum-devs/readme.md)
 
-* [Frontend](en/frontend/)
+* [Frontend](en/frontend/readme.md)
   * [How to create your first frontend for smart contracts](/en/frontend/frontend-web3-injected/)
   * [How to create a frontend for smart contracts using web3 connected to a local node](/en/frontend/frontend-web3-local/)
 

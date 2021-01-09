@@ -1,5 +1,6 @@
 * [Home](/)
 
+Sidebar main
 * [Truffle tutorials](en/truffle/)
   * [Pre requisites](en/truffle/truffle-project-prerequisites.md)
   * [On Regtest](en/truffle/truffle-regtest.md)
