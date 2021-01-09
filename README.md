@@ -1,6 +1,6 @@
 # RSK Tutorials
 
-?> By Solange Gueiros
+> By Solange Gueiros
 
 Learn how to be a Blockchain Developer on RSK.
 

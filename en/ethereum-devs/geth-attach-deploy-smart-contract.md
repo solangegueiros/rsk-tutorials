@@ -1,9 +1,8 @@
----
-layout: rsk
-title: Deploy a smart contract at RSK local node using Geth and Remix
-tags: tutorial, rsk, geth, remix, ethereum, smart contract
-description: "How to compile a smart contract using Remix and deploy it on a local node using Geth."
----
+
+
+# Deploy a smart contract at RSK local node using Geth and Remix
+
+How to compile a smart contract using Remix and deploy it on a local node using Geth.
 
 RSK’s virtual machine implementation is compatible with the Ethereum virtual machine (EVM), which enables us to make use of many of Ethereum developer tools.
 
@@ -57,7 +56,7 @@ Go to
 
 In the `home page`, choose environment `Solidity`
 
-![environment Solidity](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-01.png)
+![environment Solidity](../../images/geth-attach-deploy-smart-contract/image-01.png)
 
 ## Create a smart contract
 
@@ -65,15 +64,15 @@ Create a new file
 
 Click on the second button on the left side - file explorer
 
-![Remix file explorer](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-02.png)
+![Remix file explorer](../../images/geth-attach-deploy-smart-contract/image-02.png)
 
 Click on the + button to create a new file
 
-![Remix create a new file](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-03.png)
+![Remix create a new file](../../images/geth-attach-deploy-smart-contract/image-03.png)
 
 File name: `Register.sol`
 
-![Register.sol](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-04.png)
+![Register.sol](../../images/geth-attach-deploy-smart-contract/image-04.png)
 
 Copy the smart contract from the following gist, or inline below:
 
@@ -97,7 +96,7 @@ contract Register {
 
 Paste it into Remix here:
 
-![Register.sol at Remix](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-05.png)
+![Register.sol at Remix](../../images/geth-attach-deploy-smart-contract/image-05.png)
 
 ### Register.sol
 
@@ -113,21 +112,21 @@ Check if it is compiled, or configure auto-compile.
 
 In the 3rd button at left side click on Solidity compiler
 
-![Solidity compiler](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-06.png)
+![Solidity compiler](../../images/geth-attach-deploy-smart-contract/image-06.png)
 
 It is useful to enable auto-compile:
 
-![enable auto-compile](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-07.png)
+![enable auto-compile](../../images/geth-attach-deploy-smart-contract/image-07.png)
 
-![enable auto-compile](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-08.png)
+![enable auto-compile](../../images/geth-attach-deploy-smart-contract/image-08.png)
 
 For now, click on the button Compile Register.sol
 
-![Compile Register.sol](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-09.png)
+![Compile Register.sol](../../images/geth-attach-deploy-smart-contract/image-09.png)
 
 Check the green sign at 3rd button with the message compilation successful:
 
-![Compilation successful](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-10.png)
+![Compilation successful](../../images/geth-attach-deploy-smart-contract/image-10.png)
 
 ## Create a Javascript deploy file
 
@@ -154,27 +153,27 @@ Linux, Mac
 /RSK/Register/register.js
 ```
 
-![register.js](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-11.png)
+![register.js](../../images/geth-attach-deploy-smart-contract/image-11.png)
 
 Switch back to Remix.
 
 Solidity compiler screen has a button at the end of left size called Compilation Details:
 
-![button Compilation Details](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-12.png)
+![button Compilation Details](../../images/geth-attach-deploy-smart-contract/image-12.png)
 
 It will open a new window. Scroll down until you find `web3Deploy`.
 
-![web3Deploy](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-13.png)
+![web3Deploy](../../images/geth-attach-deploy-smart-contract/image-13.png)
 
 Click on the copy button at right side of the word `web3Deploy`:
 
-![copy web3Deploy](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-14.png)
+![copy web3Deploy](../../images/geth-attach-deploy-smart-contract/image-14.png)
 
-![copy web3Deploy](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-15.png)
+![copy web3Deploy](../../images/geth-attach-deploy-smart-contract/image-15.png)
 
 Paste it into `register.js` and save the file.
 
-![paste register.js](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-16.png)
+![paste register.js](../../images/geth-attach-deploy-smart-contract/image-16.png)
 
 Remix creates a script to deploy a smart contract and it can be used in a geth console to deploy on a RSK local node.
 
@@ -190,7 +189,7 @@ loadScript("C:/RSK/Register/register.js");
 
 Note that even if you are using Windows OS, the file path should use `/` instead of `\`.
 
-![loadScript](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-17.png)
+![loadScript](../../images/geth-attach-deploy-smart-contract/image-17.png)
 
 After several messages, as soon as the smart contract is included in a block, you will get the message "Contract mined!".
 
@@ -206,7 +205,7 @@ Put the instance's name (register), hit `.`, then hit `TAB` twice to trigger aut
 register . [TAB] [TAB]
 ```
 
-![register . TAB TAB](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-18.png)
+![register . TAB TAB](../../images/geth-attach-deploy-smart-contract/image-18.png)
 
 ### getInfo
 
@@ -218,7 +217,7 @@ You can check if we have some info at smart contract:
 register.getInfo()
 ```
 
-![register.getInfo](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-19.png)
+![register.getInfo](../../images/geth-attach-deploy-smart-contract/image-19.png)
 
 We do not have any info stored, because we did not define anything when we deployed.
 
@@ -232,7 +231,7 @@ Let us save some information in the smart contract by invoking it:
 register.setInfo("RSK", {from:eth.accounts[1]})
 ```
 
-![register.setInfo](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-20.png)
+![register.setInfo](../../images/geth-attach-deploy-smart-contract/image-20.png)
 
 We got a transaction hash because we sent a transaction to change the state of a smart contract.
 
@@ -246,7 +245,7 @@ Run the function `getInfo()` again:
 register.getInfo()
 ```
 
-![register.getInfo](/assets/img/tutorials/geth-attach-deploy-smart-contract/image-21.png)
+![register.getInfo](../../images/geth-attach-deploy-smart-contract/image-21.png)
 
 And it returned the info `RSK`.
 

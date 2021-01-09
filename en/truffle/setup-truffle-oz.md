@@ -1,10 +1,6 @@
----
-layout: rsk
-title: How to create a new project using Truffle and OpenZeppelin connected to RSK network
-tags: tutorial, rsk, openzeppelin, truffle
-description: "How to create a new blockchain project, using Truffle framework and Open Zeppelin library connected to a RSK local node and RSK testnet"
-render_features: "custom-terminals"
----
+# How to create a new project using Truffle and OpenZeppelin connected to RSK network
+
+How to create a new blockchain project, using Truffle framework and Open Zeppelin library connected to a RSK local node and RSK testnet
 
 In this tutorial, I will show you step-by-step how to create a new blockchain project, using Truffle framework and Open Zeppelin smart contracts library, connected to a RSK local node or RSK testnet.
 
@@ -85,7 +81,7 @@ you will need to install it.
 Go to the official [Java download](https://www.java.com/en/download/) page,
 download, and run the installer from there.
 
-![Java Download](/assets/img/tutorials/setup-truffle-oz/image-02.png)
+![Java Download](../../images/setup-truffle-oz/image-02.png)
 
 ### Install Java on Mac OSX and Linux
 
@@ -155,7 +151,7 @@ Verify if your VS Code installation was successful by typing the following comma
 code -v
 ```
 
-![vscode version](/assets/img/tutorials/setup-truffle-oz/image-04.png)
+![vscode version](../../images/setup-truffle-oz/image-04.png)
 
 ## Truffle
 
@@ -169,7 +165,7 @@ To install Truffle, input the command below into the terminal and press `enter` 
 npm install -g truffle
 ```
 
-![truffle install](/assets/img/tutorials/setup-truffle-oz/image-05.png)
+![truffle install](../../images/setup-truffle-oz/image-05.png)
 
 When the installation is finished, close the terminal, open it again and check the Truffle version:
 
@@ -177,7 +173,7 @@ When the installation is finished, close the terminal, open it again and check t
 truffle version
 ```
 
-![truffle version](/assets/img/tutorials/setup-truffle-oz/image-06.png)
+![truffle version](../../images/setup-truffle-oz/image-06.png)
 
 For more info:
 
@@ -196,7 +192,7 @@ Go to the [releases page](https://github.com/rsksmart/rskj/releases) and click o
 You need to click on the JAR file, in the end of the post about the lastest release.
 It's name should be `rskj-core-*.jar`:
 
-![Download last RSK release](/assets/img/tutorials/setup-truffle-oz/image-07.png)
+![Download last RSK release](../../images/setup-truffle-oz/image-07.png)
 
 ### Verify authenticity
 
@@ -215,7 +211,7 @@ For this version, it looked like this:
 43149abce0a737341a0b063f2016a1e73dae19b8af8f2e54657326ac8eedc8a0 *rskj-core-2.0.1-PAPYRUS-all.jar
 ```
 
-![Verify authenticity](/assets/img/tutorials/setup-truffle-oz/image-08.png)
+![Verify authenticity](../../images/setup-truffle-oz/image-08.png)
 
 > Note that if you are using Windows, you will need a POSIX compliant shell for this.
 > See instructions [about using Git Bash](#posix-compliant-shell) above.
@@ -269,7 +265,7 @@ Its output is directed to a log file.
 
 This is the result in the terminal in Windows OS:
 
-![Run local node](/assets/img/tutorials/setup-truffle-oz/image-09.png)
+![Run local node](../../images/setup-truffle-oz/image-09.png)
 
 **Important:**
 
@@ -288,7 +284,7 @@ This is an example using cURL:
 curl localhost:4444/1.1.0/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
 ```
 
-![local node eth_blockNumber](/assets/img/tutorials/setup-truffle-oz/image-10.png)
+![local node eth_blockNumber](../../images/setup-truffle-oz/image-10.png)
 
 The response should look similar to this:
 
@@ -323,12 +319,12 @@ You should receive a response similar to the following:
 {"jsonrpc":"2.0","id":1,"result":"0xc3f9b"}
 ```
 
-![testnet eth_blockNumber](/assets/img/tutorials/setup-truffle-oz/image-11.png)
+![testnet eth_blockNumber](../../images/setup-truffle-oz/image-11.png)
 
 The result field is presented in hexadecimal. `0xc3f9b` is the block number, and it's decimal equivalent is: `802715`.
 You can consult [testnet explorer](https://explorer.testnet.rsk.co/) and verify that it is the same result for block number.
 
-![explorer testnet block number](/assets/img/tutorials/setup-truffle-oz/image-12.png)
+![explorer testnet block number](../../images/setup-truffle-oz/image-12.png)
 
 # Initialize a Truffle project
 
@@ -350,7 +346,7 @@ For example, I will create a folder at this location - `C:\RSK\` (I'm using Wind
 
 My project can be located in the folder `C:\RSK\myproject`.
 
-![myproject folder](/assets/img/tutorials/setup-truffle-oz/image-13.png)
+![myproject folder](../../images/setup-truffle-oz/image-13.png)
 
 In your project folder, start an Truffle project by typing the command below into the terminal:
 
@@ -358,11 +354,11 @@ In your project folder, start an Truffle project by typing the command below int
 truffle init
 ```
 
-![truffle init](/assets/img/tutorials/setup-truffle-oz/image-14.png)
+![truffle init](../../images/setup-truffle-oz/image-14.png)
 
 Open the folder in VS Code to view the file structure like this:
 
-![truffle file structure](/assets/img/tutorials/setup-truffle-oz/image-15.png)
+![truffle file structure](../../images/setup-truffle-oz/image-15.png)
 
 * `./contracts`: All our smart contracts will be stored in this folder.
 * `./migrations`: Deployment scripts will be stored in this folder.
@@ -384,7 +380,7 @@ Start an npm project in the `myproject` folder by typing the following commands 
 npm init -y
 ```
 
-![npm init](/assets/img/tutorials/setup-truffle-oz/image-16.png)
+![npm init](../../images/setup-truffle-oz/image-16.png)
 
 ## 2 - Initialize a project based in a Truffle Box
 
@@ -414,7 +410,7 @@ npm install -E @openzeppelin/contracts@2.5.0
 
 The option `-E` is to save dependencies with an exact version rather than the latest version published on npm.
 
-![openzeppelin install](/assets/img/tutorials/setup-truffle-oz/image-17.png)
+![openzeppelin install](../../images/setup-truffle-oz/image-17.png)
 
 > Some contracts may change over time, so it is important to set the version. This tutorial was written using this specific version.
 
@@ -435,13 +431,13 @@ In the terminal, inside the `myproject` folder, install the HD wallet provider w
 npm install -E @truffle/hdwallet-provider@1.0.34
 ```
 
-![hd wallet provider install](/assets/img/tutorials/setup-truffle-oz/image-18.png)
+![hd wallet provider install](../../images/setup-truffle-oz/image-18.png)
 
 This `truffle package` comes with many dependencies,
 and so can take a long time to complete.
 A successful installation message is shown if everything works fine.
 
-![hd wallet provider successful installation](/assets/img/tutorials/setup-truffle-oz/image-19.png)
+![hd wallet provider successful installation](../../images/setup-truffle-oz/image-19.png)
 
 # Check package.json
 
@@ -452,7 +448,7 @@ After the installations,
 I will open the project folder named `myproject` in VS Code and verify the file `package.json`.
 Let's take a look at the dependencies in the file:
 
-![package.json](/assets/img/tutorials/setup-truffle-oz/image-20.png)
+![package.json](../../images/setup-truffle-oz/image-20.png)
 
 # Create a wallet
 
@@ -477,12 +473,12 @@ Another way is using this web app:
 
 In the `Generate a random mnemonic` field, select `12 words` and click on the `generate` button.
 
-![Generate a random mnemonic](/assets/img/tutorials/setup-truffle-oz/image-21.png)
+![Generate a random mnemonic](../../images/setup-truffle-oz/image-21.png)
 
 The result appears in the `BIP39 Mnemonic` field.
 They should be 12 random words like the words in the image:
 
-![BIP39 Mnemonic](/assets/img/tutorials/setup-truffle-oz/image-22.png)
+![BIP39 Mnemonic](../../images/setup-truffle-oz/image-22.png)
 
 My mnemonic is:
 
@@ -518,7 +514,7 @@ In the terminal, inside the `myproject` folder, create a file named `.secret`.
 Do you remember your mnemonic?
 Paste your mnemonic in this file and save it.
 
-![dot secret](/assets/img/tutorials/setup-truffle-oz/image-23.png)
+![dot secret](../../images/setup-truffle-oz/image-23.png)
 
 # Configure Truffle to connect to RSK networks
 
@@ -561,7 +557,7 @@ In the `truffle-config.js` file, include this configuration at `network` section
 
 This is the result:
 
-![network development](/assets/img/tutorials/setup-truffle-oz/image-24.png)
+![network development](../../images/setup-truffle-oz/image-24.png)
 
 ## Get the current gas price of testnet
 
@@ -573,7 +569,7 @@ In your project folder, run this cURL command:
 curl https://public-node.testnet.rsk.co/2.0.1/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}' > .gas-price-testnet.json
 ```
 
-![gas price result](/assets/img/tutorials/setup-truffle-oz/image-25.png)
+![gas price result](../../images/setup-truffle-oz/image-25.png)
 
 You should receive a response similar to the following in the file:
 
@@ -581,7 +577,7 @@ You should receive a response similar to the following in the file:
 {"jsonrpc":"2.0","id":1,"result":"0x3938700"}
 ```
 
-![gas-price-testnet.json](/assets/img/tutorials/setup-truffle-oz/image-26.png)
+![gas-price-testnet.json](../../images/setup-truffle-oz/image-26.png)
 
 The result value is presented in hexadecimal.
 
@@ -652,7 +648,7 @@ module.exports = {
 
 Check out the VS Code image too:
 
-![truffle-config](/assets/img/tutorials/setup-truffle-oz/image-27.png)
+![truffle-config](../../images/setup-truffle-oz/image-27.png)
 
 # Truffle Console connected to RSK network
 
@@ -668,7 +664,7 @@ In the terminal, inside the `myproject` folder, run this command:
 truffle console
 ```
 
-![Truffle console development](/assets/img/tutorials/setup-truffle-oz/image-28.png)
+![Truffle console development](../../images/setup-truffle-oz/image-28.png)
 
 > Any network defined with the name `development` is considered the default network.
 
@@ -690,7 +686,7 @@ truffle console --network testnet
 It takes a little longer to establish this connection when compared to the local node.
 This will open a new console:
 
-![truffle console network testnet](/assets/img/tutorials/setup-truffle-oz/image-29.png)
+![truffle console network testnet](../../images/setup-truffle-oz/image-29.png)
 
 ## Test the connection to RSK network
 
@@ -704,7 +700,7 @@ Shows the last block number.
 (await web3.eth.getBlockNumber()).toString()
 ```
 
-![getBlockNumber](/assets/img/tutorials/setup-truffle-oz/image-30.png)
+![getBlockNumber](../../images/setup-truffle-oz/image-30.png)
 
 ### Network ID
 
@@ -716,11 +712,11 @@ To get the network ID, run this command:
 
 For the local node, the network ID is `33`.
 
-![getId local](/assets/img/tutorials/setup-truffle-oz/image-31.png)
+![getId local](../../images/setup-truffle-oz/image-31.png)
 
 And for testnet, it is `31`.
 
-![getId testnet](/assets/img/tutorials/setup-truffle-oz/image-32.png)
+![getId testnet](../../images/setup-truffle-oz/image-32.png)
 
 ## Exit Truffle console
 
@@ -730,7 +726,7 @@ In the Truffle console, enter this command to exit the terminal:
 .exit
 ```
 
-![exit Truffle console](/assets/img/tutorials/setup-truffle-oz/image-33.png)
+![exit Truffle console](../../images/setup-truffle-oz/image-33.png)
 
 # Get addresses
 
@@ -754,7 +750,7 @@ See the addresses after it by entering the command below:
 accounts
 ```
 
-![list accounts](/assets/img/tutorials/setup-truffle-oz/image-34.png)
+![list accounts](../../images/setup-truffle-oz/image-34.png)
 
 Now we will write them to a file named `.accounts`
 
@@ -762,11 +758,11 @@ Now we will write them to a file named `.accounts`
 await require('fs').promises.writeFile('.accounts', accounts.join('\n'))
 ```
 
-![create file .accounts](/assets/img/tutorials/setup-truffle-oz/image-35.png)
+![create file .accounts](../../images/setup-truffle-oz/image-35.png)
 
 And we can check the file:
 
-![file .accounts](/assets/img/tutorials/setup-truffle-oz/image-36.png)
+![file .accounts](../../images/setup-truffle-oz/image-36.png)
 
 ## Check balance
 
@@ -776,7 +772,7 @@ To check the balance of an account, for example, the first account of our list (
 (await web3.eth.getBalance(accounts[0])).toString()
 ```
 
-![getBalance accounts 0](/assets/img/tutorials/setup-truffle-oz/image-37.png)
+![getBalance accounts 0](../../images/setup-truffle-oz/image-37.png)
 
 The balance is 0 and we need some tR-BTC to pay gas fees,
 which will be used to publish smart contracts and interact with them.
@@ -794,13 +790,13 @@ Copy the first address from `.accounts` file. In my case, it is
 
 Enter your wallet address and pass the CAPTCHA.
 
-![faucet.testnet.rsk.co](/assets/img/tutorials/setup-truffle-oz/image-38.png)
+![faucet.testnet.rsk.co](../../images/setup-truffle-oz/image-38.png)
 
 Wait a few seconds…
 
-![Wait a few seconds](/assets/img/tutorials/setup-truffle-oz/image-39.png)
+![Wait a few seconds](../../images/setup-truffle-oz/image-39.png)
 
-![Received some R-BTCs](/assets/img/tutorials/setup-truffle-oz/image-40.png)
+![Received some R-BTCs](../../images/setup-truffle-oz/image-40.png)
 
 You can see the transaction hash:
 
@@ -816,7 +812,7 @@ To check balance again, run this command in the Truffle console:
 (await web3.eth.getBalance(accounts[0])).toString()
 ```
 
-![getBalance accounts 0 again](/assets/img/tutorials/setup-truffle-oz/image-41.png)
+![getBalance accounts 0 again](../../images/setup-truffle-oz/image-41.png)
 
 Great! Now I have 50000000000000000, which means that I have 0.05 tR-BTC with 18 decimal places of precision.
 

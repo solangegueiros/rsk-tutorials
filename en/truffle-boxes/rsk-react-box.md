@@ -1,10 +1,3 @@
----
-layout: rsk
-title: Truffle Box (rsk-react-box)
-tags: tutorial, rsk, truffle, react
-description: "How to install and use a Truffle box that comes with React and Express, and work with the RSK network."
----
-
 # RSK React Truffle Box
 
 This box comes with everything you need to start using smart contracts from a react app on RSK Network. This box was ported and adapted from [React Truffle Box](https://github.com/truffle-box/react-box) to RSK.

@@ -1,27 +1,8 @@
----
-layout: rsk
-title: Port Ethereum dApps
-tags: tutorial, rsk, ethereum dapps, ethereum, solidity
-description: "How to port an Ethereum dApp to RSK, using Truffle framework connected to RSK testnet"
-render_features: "custom-terminals"
----
+# Port Ethereum dApps
 
-<style>
-  img.port-eth-app-img{
-    margin:0 auto;
-    width: 80%;
-  }
-</style>
+How to port an Ethereum dApp to RSK, using Truffle framework connected to RSK testnet
 
 Smart contracts for RSK are written using Solidity (a Javascript like programming language) and are fully compatible with Ethereum Smart Contracts, so you can migrate your existing Ethereum Smart Contract to RSK without changing the smart contract.
-
-### Translations
-
-#### Portuguese - Português
-
-Este artigo está disponível em Português: [Migrando dApps do Ethereum para RSK](https://solange.dev/2020/rsk-port-ethereum-dapps/ "Migrando dApps do Ethereum para RSK").
-
-E também fizemos um [webinar](/webinars/202007-006/ "Migrando dApps do Ethereum para RSK")  sobre o assunto, veja o [vídeo](https://youtu.be/-7Oi9_BDr5k)
 
 ### Solidity
 
@@ -253,7 +234,7 @@ First, we need to obtain an account on RSK Testnet and get some tR-BTC from the 
 1. Enter R-BTC as SymbolPut and Save
 1. Copy the account address
 
-<img alt="Configure MetaMask for RSK Testnet" class="port-eth-app-img" src="/assets/img/tutorials/port-ethereum-dapps/metamask-testnet.png">
+<img alt="Configure MetaMask for RSK Testnet" class="port-eth-app-img" src="../../images/port-ethereum-dapps/metamask-testnet.png">
 
 **Get tR-BTC**
 
@@ -261,7 +242,7 @@ Visit the [faucet](https://faucet.testnet.rsk.co/) to gain some tR-BTC to use in
 
 Enter the account address from MetaMask and wait for several seconds for MetaMask to refresh the new balance.
 
-<img class="port-eth-app-img" src="/assets/img/tutorials/port-ethereum-dapps/testnet-faucet.png">
+<img class="port-eth-app-img" src="../../images/port-ethereum-dapps/testnet-faucet.png">
 
 ### Testnet Explorer
 

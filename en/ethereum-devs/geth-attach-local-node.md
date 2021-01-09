@@ -1,9 +1,6 @@
----
-layout: rsk
-title: Using geth to attach to a RSK local node
-tags: tutorial, rsk, geth, ethereum
-description: "How to use the Ethereum client Geth to attach to an RSK local node (regtest) and run JSON-RPC commands."
----
+# Using geth to attach to a RSK local node
+
+How to use the Ethereum client Geth to attach to an RSK local node (regtest) and run JSON-RPC commands.
 
 RSK's virtual machine implementation is compatible with the Ethereum virtual machine (EVM), which enables us to make use of many Ethereum developer tools.
 
@@ -53,7 +50,7 @@ java -version
 
 Go to [Java Download](https://www.java.com/en/download/) if you need to install it:
 
-![Java Download](/assets/img/tutorials/geth-attach-local-node/image-01.png)
+![Java Download](../../images/geth-attach-local-node/image-01.png)
 
 For Linux and Mac users:
 
@@ -80,7 +77,7 @@ Go to the [releases page](https://github.com/rsksmart/rskj/releases) and click o
 You need to click on the link for the JAR file, at the bottom of the post about the latest release.
 It's name should be `rskj-core-*.jar`:
 
-![Download latest RSK release](/assets/img/tutorials/geth-attach-local-node/image-02.png)
+![Download latest RSK release](../../images/geth-attach-local-node/image-02.png)
 
 Alternatively, you could download and run the file from bash using the commands below:
 
@@ -136,7 +133,7 @@ java -cp C:/RSK/node/rskj-core-2.0.1-PAPYRUS-all.jar co.rsk.Start --regtest
 
 If you do not have any output after running the command, this usually means that the node is running successfully. We will confirm this in the next step.
 
-![Run local node](/assets/img/tutorials/geth-attach-local-node/image-03.png)
+![Run local node](../../images/geth-attach-local-node/image-03.png)
 
 **Important:**
 
@@ -171,13 +168,13 @@ There are other ways to install a RSK node, in other supported platforms: [Insta
 
 [Download](https://geth.ethereum.org/downloads/) and install [Geth](https://geth.ethereum.org/).
 
-![Geth download page](/assets/img/tutorials/geth-attach-local-node/image-04.png)
+![Geth download page](../../images/geth-attach-local-node/image-04.png)
 
 Do the installation with all default options.
 
 > You do not need to install Developer tools.
 
-![Geth install](/assets/img/tutorials/geth-attach-local-node/image-05.png)
+![Geth install](../../images/geth-attach-local-node/image-05.png)
 
 Alternatively, on MacOS and Linux, enter the commands below on bash to install geth:
 
@@ -206,7 +203,7 @@ In the terminal, run this command to check the version, if it runs and returns a
 geth version
 ```
 
-![geth version](/assets/img/tutorials/geth-attach-local-node/image-06.png)
+![geth version](../../images/geth-attach-local-node/image-06.png)
 
 In this link, you have more information about how to install Geth:
 [https://geth.ethereum.org/docs/install-and-build/installing-geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)
@@ -219,7 +216,7 @@ This procedure is only for a node running in your machine or in a network that y
 geth attach http://127.0.0.1:4444
 ```
 
-![image alt text](/assets/img/tutorials/geth-attach-local-node/image-07.png)
+![image alt text](../../images/geth-attach-local-node/image-07.png)
 
 We are running geth to attach (connect) to RSK local node. The address `http://127.0.0.1` connects to your own computer (localhost). The local node has the HTTP-RPC server enabled and listening at port `4444`, and this is what we connect to.
 
@@ -241,7 +238,7 @@ For more information  about RPC methods, check the Ethereum website, but remembe
 eth.blockNumber
 ```
 
-![eth.blockNumber](/assets/img/tutorials/geth-attach-local-node/image-08.png)
+![eth.blockNumber](../../images/geth-attach-local-node/image-08.png)
 
 Every time you run it, you will get a higher number, because the node is mining blocks.
 
@@ -260,7 +257,7 @@ Do not press the keys at the same time, but rather in sequence: First `Right But
 
 A small trick to see the list of initial commands. Type 2 spaces then hit TAB twice. You will get:
 
-![Geth list commands](/assets/img/tutorials/geth-attach-local-node/image-09.png)
+![Geth list commands](../../images/geth-attach-local-node/image-09.png)
 
 ## Useful functions
 
@@ -276,7 +273,7 @@ Shows the last block number
 eth.getBlockNumber
 ```
 
-![eth.getBlockNumber](/assets/img/tutorials/geth-attach-local-node/image-10.png)
+![eth.getBlockNumber](../../images/geth-attach-local-node/image-10.png)
 
 ### gasPrice
 
@@ -286,7 +283,7 @@ On a local node, we expect the gas price to be 0.
 eth.gasPrice
 ```
 
-![eth.gasPrice](/assets/img/tutorials/geth-attach-local-node/image-11.png)
+![eth.gasPrice](../../images/geth-attach-local-node/image-11.png)
 
 ## Useful net functions
 
@@ -298,7 +295,7 @@ net.version
 
 This is the network ID.
 
-![net.version](/assets/img/tutorials/geth-attach-local-node/image-12.png)
+![net.version](../../images/geth-attach-local-node/image-12.png)
 
 ### net.peerCount
 
@@ -306,7 +303,7 @@ This is the network ID.
 net.peerCount
 ```
 
-![net.peerCount](/assets/img/tutorials/geth-attach-local-node/image-13.png)
+![net.peerCount](../../images/geth-attach-local-node/image-13.png)
 
 You are alone on this network.
 
@@ -322,7 +319,7 @@ personal
 
 RSK is pre-configured with some accounts:
 
-![Personal](/assets/img/tutorials/geth-attach-local-node/image-14.png)
+![Personal](../../images/geth-attach-local-node/image-14.png)
 
 ### List Accounts
 
@@ -332,7 +329,7 @@ You can only list the accounts:
 personal.listAccounts
 ```
 
-![personal.listAccounts](/assets/img/tutorials/geth-attach-local-node/image-15.png)
+![personal.listAccounts](../../images/geth-attach-local-node/image-15.png)
 
 There are other commands which do the same thing:
 
@@ -340,7 +337,7 @@ There are other commands which do the same thing:
 eth.accounts
 ```
 
-![eth.accounts](/assets/img/tutorials/geth-attach-local-node/image-16.png)
+![eth.accounts](../../images/geth-attach-local-node/image-16.png)
 
 ### Create account
 
@@ -354,7 +351,7 @@ You need to save or remember the password as it is used to encrypt your private 
 
 In the example, the password is `"mypasswd"`.
 
-![personal.newAccount](/assets/img/tutorials/geth-attach-local-node/image-17.png)
+![personal.newAccount](../../images/geth-attach-local-node/image-17.png)
 
 My new account is
 `0xf6e443fd1c869c6a25d18a9866f3a6c7f8dfb703`
@@ -367,7 +364,7 @@ To retrieve the balance of an account, per example, `account[1]`:
 eth.getBalance(eth.accounts[1])
 ```
 
-![eth.getBalance](/assets/img/tutorials/geth-attach-local-node/image-18.png)
+![eth.getBalance](../../images/geth-attach-local-node/image-18.png)
 
 We get a big number because the result is denominated in wei. We can convert to Ether:
 
@@ -375,7 +372,7 @@ We get a big number because the result is denominated in wei. We can convert to 
 web3.fromWei(eth.getBalance(eth.accounts[1]),"ether")
 ```
 
-![balance in ethers](/assets/img/tutorials/geth-attach-local-node/image-19.png)
+![balance in ethers](../../images/geth-attach-local-node/image-19.png)
 
 On a local node, the pre-configured accounts are funded with a lot of “money”! On the RSK network, this is called `R-BTC`. So I have 1.000.000.000.000 = One trillion of R-BTC!
 
@@ -387,7 +384,7 @@ I would like to check the account (`0xf6e443fd1c869c6a25d18a9866f3a6c7f8dfb703`)
 web3.fromWei(eth.getBalance("0xf6e443fd1c869c6a25d18a9866f3a6c7f8dfb703"),"ether")
 ```
 
-![Balance of a specific account](/assets/img/tutorials/geth-attach-local-node/image-20.png)
+![Balance of a specific account](../../images/geth-attach-local-node/image-20.png)
 
 I do not have any funds in my account, so the next step is to transfer some R-BTC to it.
 
@@ -399,7 +396,7 @@ I have one trillion R-BTC in account 1 and nothing on the new account. I'd like 
 eth.sendTransaction({from:eth.accounts[1], to:"0xf6e443fd1c869c6a25d18a9866f3a6c7f8dfb703", value: web3.toWei(300000000000, "ether")})
 ```
 
-![Transfer](/assets/img/tutorials/geth-attach-local-node/image-21.png)
+![Transfer](../../images/geth-attach-local-node/image-21.png)
 
 Perfect! I got a transaction hash. This means that my transaction was sent to Blockchain and it will be included in a block in a few seconds.
 
@@ -413,7 +410,7 @@ web3.fromWei(eth.getBalance("0xf6e443fd1c869c6a25d18a9866f3a6c7f8dfb703"),"ether
 
 And the result is:
 
-![Balances after transfer](/assets/img/tutorials/geth-attach-local-node/image-22.png)
+![Balances after transfer](../../images/geth-attach-local-node/image-22.png)
 
 Great! The new account has 300 billion R-BTC and account 1 has 700 billion R-BTC.
 
@@ -425,7 +422,7 @@ To exit the geth console:
 exit
 ```
 
-![exit](/assets/img/tutorials/geth-attach-local-node/image-23.png)
+![exit](../../images/geth-attach-local-node/image-23.png)
 
 ## Final considerations
 

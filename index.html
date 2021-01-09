@@ -27,11 +27,12 @@
       nameLink for each route:
       */ 
       nameLink: {
-        '/es/': '/es/',
-        '/pt/': '/pt/',
+        '/en/': '/#/en/',
+        '/es/': '/#/es/',
+        '/pt/': '/#/pt/',
         '/': '/',
       },
-      repo: '',
+      //repo: 'https://github.com/solangegueiros/rsk.solange.dev/',
 
       /* NAVIGATION
       -----------------------------------------------------------------*/
@@ -57,12 +58,11 @@
       /* fallbackLanguages
       List of languages that will fallback to the default language 
       when a page is request and didn't exists for the given local. */
-      fallbackLanguages: ['es', 'pt'],
+      fallbackLanguages: ['en', 'es', 'pt'],
 
       /* THEMES - STYLES - CSS
       -----------------------------------------------------------------*/
       topMargin: 10,
-      //themeColor: '#00FF00',
 
       /* Global search */
       search: {
@@ -119,14 +119,19 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@latest/dist/js/docsify-themeable.min.js"></script>
 
   <!-- Plugins 
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>  
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
 
+  <script src=".\packages\docsify-tabs.min.js"></script>  
+  <script src=".\packages\docsify-copy-code.min.js"></script>
+  <script src=".\packages\docsify-plugin-flexible-alerts.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  
   <!-- Language highlight syntax
   -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-solidity.min.js"></script> 

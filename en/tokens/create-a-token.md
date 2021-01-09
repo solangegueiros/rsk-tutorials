@@ -1,9 +1,6 @@
----
-layout: rsk
-title: Create your first token
-tags: tutorial, rsk, token, openzeppelin, erc20, truffle 
-description: "How to create a token with less than 10 lines of code, using Truffle and Open Zeppelin smart contracts at RSK testnet"
----
+# Create your first token
+ 
+How to create a token with less than 10 lines of code, using Truffle and Open Zeppelin smart contracts at RSK testnet
 
 In this tutorial I will show you step-by-step how to create a token with less than 10 lines of code, using Truffle plus Open Zeppelin smart contracts, and deploy it to the RSK testnet.
 
@@ -38,7 +35,7 @@ node --version
 npm --version
 ```
 
-![node and npm version](/assets/img/tutorials/create-a-token/image-01.png)
+![node and npm version](../../images/create-a-token/image-01.png)
 
 Go to [Node.js](https://nodejs.org/en/) if you need to install it.
 
@@ -55,7 +52,7 @@ Verify if your VS code installation was successful by typing the following comma
 code -v
 ```
 
-![visual code version](/assets/img/tutorials/create-a-token/image-02.png)
+![visual code version](../../images/create-a-token/image-02.png)
 
 ## Truffle
 
@@ -70,7 +67,7 @@ To install Truffle, input the command below into the terminal and press `enter`:
 npm install truffle -g
 ```
 
-![truffle install](/assets/img/tutorials/create-a-token/image-03.png)
+![truffle install](../../images/create-a-token/image-03.png)
 
 When the installation is finished, close the terminal, open it again and check the Truffle version:
 
@@ -78,7 +75,7 @@ When the installation is finished, close the terminal, open it again and check t
 truffle version
 ```
 
-![truffle version](/assets/img/tutorials/create-a-token/image-04.png)
+![truffle version](../../images/create-a-token/image-04.png)
 
 More info: 
 
@@ -103,12 +100,12 @@ For example, I will create a  folder at this location - `C:\RSK\` (I'm using win
 
 My project can be located in the folder `C:\RSK\token`.
 
-![truffle init](/assets/img/tutorials/create-a-token/image-05.png)
+![truffle init](../../images/create-a-token/image-05.png)
 
 Open the folder in VSCode. 
 Then you can see the file structure like this:
 
-![truffle file structure](/assets/img/tutorials/create-a-token/image-06.png)
+![truffle file structure](../../images/create-a-token/image-06.png)
 
 * `./contracts`: All our smart contracts will be stored in this folder.
 * `./migrations`: Deployment scripts will be stored in this folder.
@@ -128,7 +125,7 @@ Start an npm project in the token folder by typing the following command below i
 npm init -y
 ```
 
-![npm init](/assets/img/tutorials/create-a-token/image-07.png)
+![npm init](../../images/create-a-token/image-07.png)
 
 ## Install Open Zeppelin
 
@@ -145,7 +142,7 @@ npm install -E @openzeppelin/contracts@2.5.0
 The option `-E` is to save dependencies with an exact version rather than using npm's default.
 > Some contracts may change over time, so it is important to set the version. This tutorial was written using the specific version gotten when we ran the `truffle version` command above.
 
-![openzeppelin install](/assets/img/tutorials/create-a-token/image-08.png)
+![openzeppelin install](../../images/create-a-token/image-08.png)
 
 More info: 
 
@@ -165,11 +162,11 @@ In the terminal, inside the folder token, install it with this command:
 npm install -E @truffle/hdwallet-provider@1.0.34
 ```
 
-![hd wallet provider install](/assets/img/tutorials/create-a-token/image-09.png)
+![hd wallet provider install](../../images/create-a-token/image-09.png)
 
 This `truffle` package comes with so many dependencies. A successful installation message is shown if everything works fine.
 
-![hd wallet provider successful installation](/assets/img/tutorials/create-a-token/image-10.png)
+![hd wallet provider successful installation](../../images/create-a-token/image-10.png)
 
 ## Check package.json
 
@@ -177,7 +174,7 @@ This `truffle` package comes with so many dependencies. A successful installatio
 
 After the installation, I will open the project folder named `Token` in VSCode and verify the `package.json` file. Let's take a look at the dependencies in the file:
 
-![package.json](/assets/img/tutorials/create-a-token/image-11.png)
+![package.json](../../images/create-a-token/image-11.png)
 
 # Verify that you can connect to RSK Testnet
 
@@ -200,12 +197,12 @@ If all goes well, you'll see an output similar to the following:
 {"jsonrpc":"2.0","id":1,"result":"0xc3f9b"}
 ```
 
-![eth_blockNumber jsonrpc result](/assets/img/tutorials/create-a-token/image-42.png)
+![eth_blockNumber jsonrpc result](../../images/create-a-token/image-42.png)
 
 The `result` value is presented in hexadecimal. `0xc3f9b` is the block number in hexadecimal, the corresponding decimal is: `802715`. 
 To verify the block number, visit [explorer.testnet.rsk.co](https://explorer.testnet.rsk.co/).
 
-![explorer.testnet.rsk.co blockNumber](/assets/img/tutorials/create-a-token/image-43.png)
+![explorer.testnet.rsk.co blockNumber](../../images/create-a-token/image-43.png)
 
 # Create a mnemonic
 
@@ -221,11 +218,11 @@ We are going to use this web app:
 
 In the `Generate a random mnemonic` field, select `12 words` and click on the `generate` button.
 
-![Generate a random mnemonic](/assets/img/tutorials/create-a-token/image-12.png)
+![Generate a random mnemonic](../../images/create-a-token/image-12.png)
 
 The result appears in the `BIP39 Mnemonic` field. They should be 12 random words like the words in the image:
 
-![BIP39 Mnemonic](/assets/img/tutorials/create-a-token/image-13.png)
+![BIP39 Mnemonic](../../images/create-a-token/image-13.png)
 
 My mnemonic is: 
 
@@ -241,7 +238,7 @@ Inside the `token` folder, create a file named `.secret`.
 
 Paste your mnemonic in this file and save it.
 
-![dot secret](/assets/img/tutorials/create-a-token/image-14.png)
+![dot secret](../../images/create-a-token/image-14.png)
 
 # Configure Truffle to connect to RSK testnet
 
@@ -286,7 +283,7 @@ truffle console --network testnet
 
 And you go to a new console:
 
-![truffle console](/assets/img/tutorials/create-a-token/image-15.png)
+![truffle console](../../images/create-a-token/image-15.png)
 
 This action instructs Truffle to connect to an RSK public testnet node and grants it permission to control the newly created account.
 
@@ -306,7 +303,7 @@ account
 
 In my example, the output is `0x9682725a85f85f097ab368555a286618dc982c99`. Copy this address.
 
-![account address](/assets/img/tutorials/create-a-token/image-16.png)
+![account address](../../images/create-a-token/image-16.png)
 
 ## Check balance
 
@@ -318,7 +315,7 @@ To check the balance, run this command in Truffle console:
 
 The balance is 0 and we need some to pay for gas fees. We shall get some tR-BTC in the next step.
 
-![getBalance(account) 0](/assets/img/tutorials/create-a-token/image-44.png)
+![getBalance(account) 0](../../images/create-a-token/image-44.png)
 
 # Testnet Faucet
 
@@ -326,15 +323,15 @@ You can get some tR-BTC from the RSK Testnet faucet.
 
 [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/)
 
-![faucet.testnet.rsk.co](/assets/img/tutorials/create-a-token/image-17.png)
+![faucet.testnet.rsk.co](../../images/create-a-token/image-17.png)
 
 Enter your wallet address that you copied in the last step, and complete the CAPTCHA.
 
-![Wait a few seconds](/assets/img/tutorials/create-a-token/image-18.png)
+![Wait a few seconds](../../images/create-a-token/image-18.png)
 
 Wait a few seconds...
 
-![Received some R-BTCs](/assets/img/tutorials/create-a-token/image-19.png)
+![Received some R-BTCs](../../images/create-a-token/image-19.png)
 
 You can see the transaction hash:
 
@@ -350,7 +347,7 @@ To check balance again, run this command in the Truffle console:
 (await web3.eth.getBalance(account)).toString()
 ```
 
-![getBalance](/assets/img/tutorials/create-a-token/image-20.png)
+![getBalance](../../images/create-a-token/image-20.png)
 
 Now I have 50000000000000000, which means that I have 0.05 tR-BTC with 18 decimal places of precision.
 
@@ -358,7 +355,7 @@ Now I have 50000000000000000, which means that I have 0.05 tR-BTC with 18 decima
 
 In the `contracts` folder, create a new file named `Token.sol`.
 
-![create Token.sol](/assets/img/tutorials/create-a-token/image-21.png)
+![create Token.sol](../../images/create-a-token/image-21.png)
 
 ## Token.sol with only 7 lines!
 
@@ -388,7 +385,7 @@ Inside the token, we define some basic information about the token: `name`, `sym
 
 To inherit the library's attributes and functions, we simply define our contract as a `ERC20Mintable` using the `is` keyword in this way.
 
-![Token.sol](/assets/img/tutorials/create-a-token/image-22.png)
+![Token.sol](../../images/create-a-token/image-22.png)
 
 # Compile a smart contract
 
@@ -398,7 +395,7 @@ In the Truffle console, run this command:
 compile
 ```
 
-![truffle compile](/assets/img/tutorials/create-a-token/image-23.png)
+![truffle compile](../../images/create-a-token/image-23.png)
 
 # Deploy a smart contract
 
@@ -412,7 +409,7 @@ A history of previously run migrations is recorded on-chain through a special Mi
 
 In the migrations folder, create the file `2_deploy_contracts.js`
 
-![create 2_deploy_contracts.js](/assets/img/tutorials/create-a-token/image-24.png)
+![create 2_deploy_contracts.js](../../images/create-a-token/image-24.png)
 
 Copy and paste this code.
 
@@ -424,7 +421,7 @@ module.exports = function(deployer) {
 };
 ```
 
-![2_deploy_contracts.js](/assets/img/tutorials/create-a-token/image-25.png)
+![2_deploy_contracts.js](../../images/create-a-token/image-25.png)
 
 ## Migrate
 
@@ -438,11 +435,11 @@ Wait a few minutes while the transactions for the smart contract deployments are
 
 The migrate command will compile the smart contract again if necessary.
 
-![truffle migrate](/assets/img/tutorials/create-a-token/image-26.png)
+![truffle migrate](../../images/create-a-token/image-26.png)
 
 First, it deploys the smart contract `Migrations.sol`, file generated by Truffle:
 
-![deploy Migrations.sol](/assets/img/tutorials/create-a-token/image-27.png)
+![deploy Migrations.sol](../../images/create-a-token/image-27.png)
 
 This is the transaction:
 
@@ -450,7 +447,7 @@ This is the transaction:
 
 And then it deploys our smart contract `Token.sol`:
 
-![deploy Token.sol](/assets/img/tutorials/create-a-token/image-28.png)
+![deploy Token.sol](../../images/create-a-token/image-28.png)
 
 This is the transaction:
 
@@ -462,7 +459,7 @@ Congratulations!
 
 Save the contract address of token, it will be used shortly:
 
-![token address](/assets/img/tutorials/create-a-token/image-29.png)
+![token address](../../images/create-a-token/image-29.png)
 
 In the tutorial example:
 
@@ -489,7 +486,7 @@ accounts[0]
 accounts[1]
 ```
 
-![accounts](/assets/img/tutorials/create-a-token/image-30.png)
+![accounts](../../images/create-a-token/image-30.png)
 
 ## Connect with your token
 
@@ -497,7 +494,7 @@ accounts[1]
 const token = await Token.deployed()
 ```
 
-![token instance](/assets/img/tutorials/create-a-token/image-31.png)
+![token instance](../../images/create-a-token/image-31.png)
 
 Confirm if our instance is OK.
 
@@ -508,7 +505,7 @@ This will display the published address of the smart contract, and the transacti
 token. [TAB] [TAB]
 ```
 
-![token tab tab](/assets/img/tutorials/create-a-token/image-32.png)
+![token tab tab](../../images/create-a-token/image-32.png)
 
 ## Check the total supply
 
@@ -518,7 +515,7 @@ To check if we have tokens already minted, call the `totalSupply` function:
 (await token.totalSupply()).toString()
 ```
 
-![totalSupply 0](/assets/img/tutorials/create-a-token/image-33.png)
+![totalSupply 0](../../images/create-a-token/image-33.png)
 
 The returned value is 0, which is expected, since we did not perform any initial mint when we deployed the token.
 
@@ -530,7 +527,7 @@ To check the balance of an account, call the `balanceOf` function. For example, 
 (await token.balanceOf(accounts[0])).toString()
 ```
 
-![balanceOf 0](/assets/img/tutorials/create-a-token/image-34.png)
+![balanceOf 0](../../images/create-a-token/image-34.png)
 
 The returned value is also 0, which is expected, since we did not make any initial mint when we deployed the token, and by definition no accounts can have any tokens yet.
 
@@ -544,7 +541,7 @@ token.mint(accounts[0], 10000)
 
 This command sent a transaction to mint 100 tokens for account 0. 
 
-![token.mint account 0](/assets/img/tutorials/create-a-token/image-45.png)
+![token.mint account 0](../../images/create-a-token/image-45.png)
 
 To verify the transaction in the explorer, visit:
 
@@ -558,7 +555,7 @@ token.mint(accounts[1], 10000)
 
 For each account, the result will be like the following:
 
-![token.mint account 1](/assets/img/tutorials/create-a-token/image-35.png)
+![token.mint account 1](../../images/create-a-token/image-35.png)
 
 I can also mint to a specific address, `0xa52515946DAABe072f446Cc014a4eaA93fb9Fd79`:
 
@@ -566,7 +563,7 @@ I can also mint to a specific address, `0xa52515946DAABe072f446Cc014a4eaA93fb9Fd
 token.mint("0xa52515946DAABe072f446Cc014a4eaA93fb9Fd79", 10000)
 ```
 
-![token.mint address](/assets/img/tutorials/create-a-token/image-36.png)
+![token.mint address](../../images/create-a-token/image-36.png)
 
 The transaction:
 
@@ -580,7 +577,7 @@ Check the balance of account 0 again:
 (await token.balanceOf(accounts[0])).toString()
 ```
 
-![balanceOf account 100](/assets/img/tutorials/create-a-token/image-37.png)
+![balanceOf account 100](../../images/create-a-token/image-37.png)
 
 The returned value is 10000, which is 100 with 2 decimal places of precision. This is exactly what we expected, as we issued 100 tokens
 
@@ -590,7 +587,7 @@ Also, you can get the balance of a specific address, for example, `0xa52515946DA
 (await token.balanceOf("0xa52515946DAABe072f446Cc014a4eaA93fb9Fd79")).toString()
 ```
 
-![balanceOf address 100](/assets/img/tutorials/create-a-token/image-38.png)
+![balanceOf address 100](../../images/create-a-token/image-38.png)
 
 ## Check the total supply (again)
 
@@ -600,7 +597,7 @@ Check the total supply again:
 (await token.totalSupply()).toString()
 ```
 
-![totalSupply 300](/assets/img/tutorials/create-a-token/image-39.png)
+![totalSupply 300](../../images/create-a-token/image-39.png)
 
 The returned value is 30000, which is 300 with 2 decimal places of precision. 
 After minting 100 tokens for 3 accounts, this is perfect!
@@ -614,7 +611,7 @@ This can be done by calling the `transfer` function.
 token.transfer(accounts[2], 4000, {from: accounts[0]})
 ```
 
-![token.transfer](/assets/img/tutorials/create-a-token/image-40.png)
+![token.transfer](../../images/create-a-token/image-40.png)
 
 Transaction:
 
@@ -626,7 +623,7 @@ Account 2 had no tokens before the transfer, and now it should have 40. Let’s 
 (await token.balanceOf(accounts[2])).toString()
 ```
 
-![balanceOf account 3](/assets/img/tutorials/create-a-token/image-41.png)
+![balanceOf account 3](../../images/create-a-token/image-41.png)
 
 Great! The balance of account 2 is correct.
 

@@ -1,9 +1,6 @@
----
-layout: rsk
-title: Create your own collectable token on RSK network
-tags: tutorial, rsk, token, openzeppelin, erc721, truffle, frontend, web3, react
-description: "How to create your own collectable token on RSK network using Truffle framework, Open Zeppelin libraries and a react frontend."
----
+# Create your own collectable token on RSK network
+
+How to create your own collectable token on RSK network using Truffle framework, Open Zeppelin libraries and a react frontend.
 
 In this tutorial, you will learn about blockchain programming from scratch by building a fully decentralized application (DApp), step by step.
 You will also learn how to create your own collectable token on the RSK blockchain network using the Truffle framework, Open Zeppelin (OZ) libraries, and build a front end with React, using `create-react-app`.
@@ -137,7 +134,7 @@ In the project folder, at terminal, run:
 npx create-react-app app --use-npm
 ```
 
-![create-react-app](/assets/img/tutorials/create-a-collectable-token/image-01.png)
+![create-react-app](../../images/create-a-collectable-token/image-01.png)
 
 The option `--use-npm` is to select npm as package manager.
 
@@ -145,11 +142,11 @@ The option `--use-npm` is to select npm as package manager.
 
 This is a large package and this might take a couple of minutes to show the message of successful installation:
 
-![create-react-app successful installation](/assets/img/tutorials/create-a-collectable-token/image-02.png)
+![create-react-app successful installation](../../images/create-a-collectable-token/image-02.png)
 
 Now you have a new folder named `app` and we will customize our frontend later.
 
-![create-react-app file structure](/assets/img/tutorials/create-a-collectable-token/image-03.png)
+![create-react-app file structure](../../images/create-a-collectable-token/image-03.png)
 
 ## Web3.js
 
@@ -166,9 +163,9 @@ npm install -E web3@1.2.7
 
 The option `-E` is to save dependencies with an exact version rather than using npm's default.
 
-![web3 install](/assets/img/tutorials/create-a-collectable-token/image-04.png)
+![web3 install](../../images/create-a-collectable-token/image-04.png)
 
-![web3 successful installation](/assets/img/tutorials/create-a-collectable-token/image-05.png)
+![web3 successful installation](../../images/create-a-collectable-token/image-05.png)
 
 More info:
 [web3.js](https://web3js.readthedocs.io/)
@@ -180,11 +177,11 @@ cd app
 npm install -E bootstrap@4.4.1
 ```
 
-![web3 install](/assets/img/tutorials/create-a-collectable-token/image-06.png)
+![web3 install](../../images/create-a-collectable-token/image-06.png)
 
 As I said before, the option `-E` is to save dependencies with an exact version rather than using npm's default.
 
-![web3 successful installation](/assets/img/tutorials/create-a-collectable-token/image-07.png)
+![web3 successful installation](../../images/create-a-collectable-token/image-07.png)
 
 # Configure Truffle
 
@@ -230,7 +227,7 @@ module.exports = {
 
 It looked like this:
 
-![truffle-config](/assets/img/tutorials/create-a-collectable-token/image-08.png)
+![truffle-config](../../images/create-a-collectable-token/image-08.png)
 
 ## About contracts_build_directory
 
@@ -246,7 +243,7 @@ We will create a smart contract named `Color.sol` that will inherit the ERC721 d
 
 In the Contracts folder, create a new file named `Color.sol`.
 
-![Create Color.sol](/assets/img/tutorials/create-a-collectable-token/image-09.png)
+![Create Color.sol](../../images/create-a-collectable-token/image-09.png)
 
 ## File Color.sol
 
@@ -279,7 +276,7 @@ contract Color is ERC721Full {
 
 It looked like this:
 
-![Color.sol](/assets/img/tutorials/create-a-collectable-token/image-10.png)
+![Color.sol](../../images/create-a-collectable-token/image-10.png)
 
 ## Understanding the smart contract
 
@@ -312,7 +309,7 @@ In the terminal, run this command:
 truffle compile
 ```
 
-![truffle compile](/assets/img/tutorials/create-a-collectable-token/image-11.png)
+![truffle compile](../../images/create-a-collectable-token/image-11.png)
 
 # Deploy a smart contract at testnet
 
@@ -327,7 +324,7 @@ A history of previously run migrations is recorded on-chain through a special Mi
 
 In the `migrations` folder, create the file `2_deploy_contracts.js`
 
-![create 2_deploy_contracts](/assets/img/tutorials/create-a-collectable-token/image-12.png)
+![create 2_deploy_contracts](../../images/create-a-collectable-token/image-12.png)
 
 Copy and paste this code:
 
@@ -341,7 +338,7 @@ module.exports = function(deployer) {
 
 It looked like this:
 
-![2_deploy_contracts](/assets/img/tutorials/create-a-collectable-token/image-13.png)
+![2_deploy_contracts](../../images/create-a-collectable-token/image-13.png)
 
 ## Migrate
 
@@ -355,11 +352,11 @@ Wait a few minutes while the transactions for the smart contract deployments are
 
 The migrate command will compile the smart contract again if necessary.
 
-![truffle migrate compile](/assets/img/tutorials/create-a-collectable-token/image-14.png)
+![truffle migrate compile](../../images/create-a-collectable-token/image-14.png)
 
 First, it deploys the smart contract `Migrations.sol`, file generated by Truffle:
 
-![truffle migrate Migrations.sol](/assets/img/tutorials/create-a-collectable-token/image-15.png)
+![truffle migrate Migrations.sol](../../images/create-a-collectable-token/image-15.png)
 
 This is the transaction at RSK testnet:
 
@@ -367,7 +364,7 @@ This is the transaction at RSK testnet:
 
 And then it deploys our smart contract `Color.sol`:
 
-![truffle migrate Color.sol](/assets/img/tutorials/create-a-collectable-token/image-16.png)
+![truffle migrate Color.sol](../../images/create-a-collectable-token/image-16.png)
 
 This is the transaction at RSK testnet:
 
@@ -442,7 +439,7 @@ serviceWorker.unregister();
 
 At this point, your completed `index.js` file should looks like this:
 
-![index.js](/assets/img/tutorials/create-a-collectable-token/image-17.png)
+![index.js](../../images/create-a-collectable-token/image-17.png)
 
 ## App.css
 
@@ -463,7 +460,7 @@ This code customizes the appearance for tokens.
 
 This is the result:
 
-![App.css](/assets/img/tutorials/create-a-collectable-token/image-18.png)
+![App.css](../../images/create-a-collectable-token/image-18.png)
 
 ## App.js
 
@@ -732,21 +729,21 @@ In the `app` folder, at terminal, run:
 npm start
 ```
 
-![npm start](/assets/img/tutorials/create-a-collectable-token/image-19.png)
+![npm start](../../images/create-a-collectable-token/image-19.png)
 
 It will automatically open the default browser at [http://localhost:3000/](http://localhost:3000/)
 
 If it does not open, you can enter the local url manually in the browser.
 
-![localhost:3000](/assets/img/tutorials/create-a-collectable-token/image-20.png)
+![localhost:3000](../../images/create-a-collectable-token/image-20.png)
 
 Metamask automatically detects that our app would like to connect, authorize this action by clicking on the `Connect` button.
 
-![authorize Metamask](/assets/img/tutorials/create-a-collectable-token/image-21.png)
+![authorize Metamask](../../images/create-a-collectable-token/image-21.png)
 
 And this is our frontend!
 
-![frontend](/assets/img/tutorials/create-a-collectable-token/image-22.png)
+![frontend](../../images/create-a-collectable-token/image-22.png)
 
 # Interact with the smart contract
 
@@ -789,29 +786,29 @@ I will enter the color red, value `#FF0000`.
 
 > Do not forget to use the symbol `#`
 
-![#FF0000](/assets/img/tutorials/create-a-collectable-token/image-23.png)
+![#FF0000](../../images/create-a-collectable-token/image-23.png)
 
-![#FF0000 Metamask confirm](/assets/img/tutorials/create-a-collectable-token/image-24.png)
+![#FF0000 Metamask confirm](../../images/create-a-collectable-token/image-24.png)
 
 Click on the `confirm` button.
 
 Great! Now I have my first color collectable token:
 
-![Red minted](/assets/img/tutorials/create-a-collectable-token/image-25.png)
+![Red minted](../../images/create-a-collectable-token/image-25.png)
 
 I would like to mint the blue color: `#0000FF`
 
-![#0000FF](/assets/img/tutorials/create-a-collectable-token/image-26.png)
+![#0000FF](../../images/create-a-collectable-token/image-26.png)
 
 Wait for a few seconds for your transaction to be mined…
 
 And now I have two colors in my collection!
 
-![Blue minted](/assets/img/tutorials/create-a-collectable-token/image-27.png)
+![Blue minted](../../images/create-a-collectable-token/image-27.png)
 
 And my collection is growing!
 
-![color collection](/assets/img/tutorials/create-a-collectable-token/image-28.png)
+![color collection](../../images/create-a-collectable-token/image-28.png)
 
 # Congratulations!
 
