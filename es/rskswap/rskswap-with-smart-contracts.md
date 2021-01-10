@@ -28,6 +28,8 @@ A continuación se muestra un resumen de los pasos que vamos a seguir:
 - Metamask - extensión de google chrome 
 - Remix - herramienta web, online
 
+Para aprender Remix y Metamask, puedes mirar el tutorial [primer smart contract usando Remix y Metamask](es/remix-metamask/readme.md)
+
 ## Metamask
 
 Ve a [metamask.io](https://metamask.io/) e instálalo.
@@ -36,7 +38,8 @@ Ve a [metamask.io](https://metamask.io/) e instálalo.
 
 Se puede acceder en:
 
-[http://remix.ethereum.org/](http://remix.ethereum.org/)
+[remix.ethereum.org/](https://remix.ethereum.org/)
+
 
 # Conexión de Metamask con RSK testnet
 
@@ -155,7 +158,7 @@ Si no lo ha habilitado:
 
 * Haz clic en el tercer botón de la izquierda: Solidity compiler
 
-* Haz clic en el botón Compilar Register.sol
+* Haz clic en el botón Compilar TokenLaBitconf.sol
 
 * Verifica el letrero verde en el tercer botón con el mensaje: compilation successful
 
@@ -185,7 +188,7 @@ Haz clic en confirm
 
 En la parte inferior derecha, podemos ver el mensaje.
 
-creation of Register pending...
+creation of TokenLaBitconf pending...
 
 Copia el address del token
 
@@ -284,7 +287,7 @@ En la interfaz `InterfaceRouter`, expandir el botón `addLiquidityETH`
 
 Vamos a completar los parámetros:
 
-- Token = la dirección del token 
+- token = la dirección del token 
 - amountTokenDesired = la cantidad de tokens que queremos agregar al fondo de liquidez
 - amountTokenMin = amountTokenDesired porque es la primera vez que agregamos liquidez
 - amountEthMin = mientras estamos creando este fondo de liquidez ahora, definiendo la cantidad de RBTCs (Ethers), estamos definiendo la cotización del token en RBTC (ETH)
@@ -296,7 +299,7 @@ En el sitio [unixtimestamp](https://www.unixtimestamp.com/index.php) puedes cons
 Para agregar 5 minutos, use + 300 seconds
 
 Por ejemplo:
-- Token = 0x69E79Cd83cf19501222358b16C818Ffe6FF31f5a
+- token = 0x69E79Cd83cf19501222358b16C818Ffe6FF31f5a
 - amountTokenDesired = 100 * 10 ^18 (100 y 18 zeros) = 100000000000000000000
 - amountTokenMin = amountTokenDesired because it's the first time we add liquidity
 - amountEthMin = 0.001 * 10 ^18 = 1000000000000000
@@ -320,7 +323,7 @@ Haz clic en el botón `Transact` o `addLiquidityETH`
 
 Obtener cotizaciones y precios en RSKSwap mediante programación
 
-Si quiero comprar tokens, ¿cuándo tengo que enviar en WETH (wRBTC)?
+Si quiero comprar tokens, ¿cuántos WETH (wRBTC) necesito enviar?
 
 Para saber esto usaré la función `getAmountsIn`, con los parametros:
 
