@@ -13,7 +13,7 @@ Tutorials for Ethereum developers: Using Geth, Remix, MetaMask and Truffle with 
 - [Create a frontend for smart contracts using web3 connected to a local node](/en/frontend/frontend-web3-local.md)
 
 ## Truffle
-- [About Truffle](/en/truffle/)
+- [About Truffle](/en/truffle/readme.md)
 - [Truffle project prerequisites](/en/truffle/truffle-project-prerequisites)
 - [Setup a project with Truffle and OpenZeppelin](/en/truffle/setup-truffle-oz.md)
 - [Connect Truffle to Regtest, the RSK local node](/en/truffle/truffle-regtest.md)
@@ -23,7 +23,7 @@ Tutorials for Ethereum developers: Using Geth, Remix, MetaMask and Truffle with 
 - [Developing smart contracts using TDD in Truffle](/en/truffle/truffle-tdd.md)
 
 ## RSK Truffle boxes
-- [About RSK Truffle boxes](/en/truffle-boxes/)
+- [About RSK Truffle boxes](/en/truffle-boxes/readme.md)
 - [Starter box](en/truffle-boxes/rsk-starter-box.md)
 - [Plant box](en/truffle-boxes/rsk-plant-box.md)
 - [Token box](en/truffle-boxes/rsk-token-box.md) 

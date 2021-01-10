@@ -1,10 +1,6 @@
----
-title: Migrando dApps do Ethereum para RSK
-date: "2020-07-15T18:00:00.000Z"
-description: "Conheça as possibilidades para migrar seus smart contracts e aplicações Ethereum para a rede RSK."
-tags: tutorial, rsk, ethereum, smart-contracts, truffle, remix
-type: blog
----
+# Migrando dApps do Ethereum para RSK
+
+Conheça as possibilidades para migrar seus smart contracts e aplicações Ethereum para a rede RSK.
 
 ![Title](/images/image-00.png)
 

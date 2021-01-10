@@ -1,6 +1,4 @@
-# RSK Tutorials
-
-![RSK](../images/rsk-logo.png ':size=100')
+# RSK Tutorials - English
 
 ?> By Sol :sun_with_face: - Solange Gueiros
 
