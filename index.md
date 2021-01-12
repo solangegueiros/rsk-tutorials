@@ -2,6 +2,12 @@
 
 ![RSK](./images/rsk-logo.png ':size=100')
 
+
+<button onclick="window.location.href = '#/en/readme';">In English</button>
+<button onclick="window.location.href = '#/es/readme';">En Español</button>
+<button onclick="window.location.href = '#/pt/readme';">Em Português</button>
+
+
 ?> By Sol :sun_with_face: - Solange Gueiros
 
 <!-- tabs:start -->
