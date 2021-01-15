@@ -1,12 +1,12 @@
 # Cómo usar RSKSwap con smart contracts
 
-RSKSwap es un exchange descentralizado, que permite cambiar tokens ERC20 automáticamente, no hay necesidad de esperar a un comprador o un vendedor. 
+[RSKSwap](https://rskswap.com/) es un exchange descentralizado, que permite cambiar tokens ERC20 automáticamente, no hay necesidad de esperar a un comprador o un vendedor. 
 Cuenta con la ventaja de los bajos costos y seguridad de la red RSK. 
 Además no requiere KYC y no tiene límites para retiros o depósitos.
 
 En este post te mostraré una guía paso a paso sobre cómo crear tu propio token e intercambialo en RSKSwap programáticamente, usando smart contracts.
 
-Para saber más, puedes leer la Documentación de RSKSwap.
+Para saber más, puedes leer la [Documentación](https://rskswap.com/docs/v2) de RSKSwap.
 
 
 # Resumen

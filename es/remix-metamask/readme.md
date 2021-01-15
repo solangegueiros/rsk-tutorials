@@ -77,7 +77,7 @@ https://explorer.testnet.rsk.co
 
 ![RSK Testnet configuration](/images/image-02.png)
 
-Después de configurarlo, cierre la ventana de configuración y selecciona RSK Tesnet.
+Después de configurarlo, cierra la ventana de configuración y selecciona RSK Tesnet.
 
 # TestNet Faucet
 
@@ -161,7 +161,7 @@ Injected Web3 conecta Remix con una cuenta activa en Metamask
 
 Se abrirá una ventana popup de Metamask para autorizar la conexión.
 
-Primero seleccione la cuenta y haz clic en botón Next. Probablemente solo tengas una.
+Primero selecciona la cuenta y haz clic en botón Next. Probablemente solo tengas una.
 
 ![Metamask select accounts](/images/image-15.png)
 
