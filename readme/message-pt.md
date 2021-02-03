@@ -17,3 +17,5 @@ Aprenda a ser um desenvolvedor Blockchain na RSK.
 * [Token colecionável](pt/create-token-nft/readme.md)
 
 * [Frontend com rsk3.js](pt/rsk3js-webpack/readme.md)
+
+* [RSKSwap com smart contracts](pt/rskswap/rskswap-with-smart-contracts.md)

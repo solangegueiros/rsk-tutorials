@@ -357,7 +357,7 @@ En nuestro ejemplo, el resultado es
 
 `amounts 1013140431395196,1000000000000000000`
 
-Ou seja:
+És decir:
 - 1013140431395196 wei RBTC (ETH) = 1000000000000000000 wei Token
 - 0.001013140431395196 RBTC (ETH) = 1 Token
 
@@ -405,7 +405,7 @@ Haz clic en el botón `Transact` o `swapETHForExactTokens`
 
 # Consideraciones finales
 
-Te mostré cómo crear tu propio token e intercambialo en RSKSwap programáticamente, usando smart contracts.
+Te mostré cómo crear tu propio token e intercambiarlo en RSKSwap programáticamente, usando smart contracts.
 
 Espero que este tutorial haya sido útil y agradezco tus comentarios. Compártelo si te gusta :)
 
