@@ -18,4 +18,6 @@ Aprenda a ser um desenvolvedor Blockchain na RSK.
 
 * [Frontend com rsk3.js](pt/rsk3js-webpack/readme.md)
 
+## DeFi - Finanças descentralizadas
+
 * [RSKSwap com smart contracts](pt/rskswap/rskswap-with-smart-contracts.md)

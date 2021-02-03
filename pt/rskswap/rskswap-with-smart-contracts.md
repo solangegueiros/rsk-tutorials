@@ -2,7 +2,7 @@
 
 [RSKSwap](https://rskswap.com/) é uma exchange descentralizada, que permite negociar tokens ERC20 automaticamente, sem a necessidade de esperar um comprador ou um vendedor. 
 Conta com as vantagens dos baixos custos e da segurança da rede RSK. 
-Além disso não precisa de KYC e não tem limites para saques ou depósitos.
+Além disso, não precisa de KYC e não tem limites para saques ou depósitos.
 
 Neste tutorial apresento um guia passo-a-passo para criar seu próprio token e trocá-lo em RSKSwap programaticamente, usando smart contracts.
 
