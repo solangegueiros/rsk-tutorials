@@ -7,7 +7,6 @@ Configure uma wallet utilizando Metamask, conecte a RSK testnet, crie, compile e
 A implementação da máquina virtual da RSK é compatível com o Ethereum EVM, então  podemos usar muitas das ferramentas para desenvolvedores Ethereum.
 
 Neste tutorial, mostrarei passo a passo como usar o Remix e o Metamask, ferramentas criadas originalmente para o Ethereum, para criar, compilar e publicar um smart contract simples na Testnet da RSK.
-
 ## Overview
 
 Executaremos estas etapas:

@@ -108,7 +108,7 @@ Em Environment, escolha `Injected Web3`
 
 Injected Web3 conecta Remix com a conta ativa / selecionada no Metamask
 
-Se abrirá una janela popup do Metamask para autorizar a conexão.
+Abrirá uma janela popup do Metamask para autorizar a conexão.
 
 Primero selecione a conta e clique no botão Next. Provavelmente você terá apenas uma conta.
 

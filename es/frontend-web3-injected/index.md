@@ -55,7 +55,7 @@ npm --version
 
 ![node and npm version](/images/image-01.png)
 
-Va a [Node.js](https://nodejs.org/en/) si necesita instalarlo.
+Ve a [Node.js](https://nodejs.org/en/) si necesita instalarlo.
 
 ## Visual Studio Code (VSCode)
 
@@ -131,7 +131,7 @@ Voy a resumir por acá:
 
 ### Remix
 
-Vá en [http://remix.ethereum.org/](http://remix.ethereum.org/)
+Ve en [http://remix.ethereum.org/](http://remix.ethereum.org/)
 
 ### Crea un smart contract
 
@@ -373,7 +373,7 @@ node server.js
 
 ![node server.js](/images/image-07.png)
 
-Después va a 
+Después ve a 
 
 [http://localhost:3300](http://localhost:3300)
 
@@ -395,7 +395,7 @@ No tenemos ningún valor almacenado, porque no definimos nada en el momento en q
 
 Ingresa cualquier valor en el campo de texto info y haz clic en el botón Set.
 
-Va a llamar la función `setInfo()` en la instancia de contrato inteligente Register, con la información que tu definiste.
+Ve a llamar la función `setInfo()` en la instancia de contrato inteligente Register, con la información que tu definiste.
 
 Voy a ingresar el valor "RSK".
 

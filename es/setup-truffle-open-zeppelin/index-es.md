@@ -292,7 +292,7 @@ Además del nodo local, también publicaremos contratos inteligentes en la red d
 
 Este es un ejemplo que usa cURL. Ejecute el siguiente comando en la terminal.
 
-Si está utilizando una computadora con sistema operativo Windows, no funciona en la terminal, mi sugerencia es usar Git Bash. Para instalar, vaya al sitio de [Git](https://git-scm.com/).
+Si está utilizando una computadora con sistema operativo Windows, no funciona en la terminal, mi sugerencia es usar Git Bash. Para instalar, ve al sitio de [Git](https://git-scm.com/).
 
 ```shell
 curl https://public-node.testnet.rsk.co/2.0.1/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
@@ -323,7 +323,7 @@ Hay dos opciones para iniciar un proyecto:
 
 ## 1 - Inicialize un nuevo proyecto Truffle 
 
-Cree un nuevo directorio, `myproject`, por ejemplo, y vaya a la carpeta en la terminal.
+Crea un nuevo directorio, `myproject`, por ejemplo, y ve a la carpeta en la terminal.
 
 ```shell
 mkdir myproject
@@ -344,7 +344,7 @@ truffle init
 
 ![truffle init](/images/image-14.png)
 
-Abra la carpeta en VSCode.
+Abre la carpeta en VSCode.
 Verá una estructura de directorio como esta:
 
 ![truffle file structure](/images/image-15.png)
@@ -400,9 +400,9 @@ La opción `-E` es para guardar las dependencias en la versión definida en la i
 
 ![openzeppelin install](/images/image-17.png)
 
-> Os smart contracts podem ser alterados de uma versão para outra, então é importante fixar a versão porque nosso tutorial foi escrito utilizando esta versão.
+> Los contratos inteligentes se pueden cambiar de una versión a otra, por lo que es importante corregir la versión porque nuestro tutorial fue escrito usando esta versión.
 
-# Instales el HD wallet provider
+# Instale el HD wallet provider
 
 Para conectarnos a la red RSK, usaremos un paquete de proveedor que hace posible conectarse a cualquier red desbloqueando una cuenta localmente.
 Usaremos [@truffle/hdwallet-provider](https://www.npmjs.com/package/@truffle/hdwallet-provider).
@@ -410,7 +410,7 @@ Este proveedor permite firmar transacciones para direcciones generadas a partir 
 
 > Debes haber instalado Node >= 7.6.
 
-En la terminal, en la carpeta `myproject`, instales con este comando:
+En la terminal, en la carpeta `myproject`, instale con este comando:
 
 ```shell
 npm install -E @truffle/hdwallet-provider@1.0.34

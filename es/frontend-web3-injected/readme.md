@@ -175,7 +175,7 @@ En el panel lateral izquierdo, ve al botón Deploy and run transactions. En segu
 
 Cuando hace deploy de un contrato inteligente en Remix, podemos verlo en el panel izquierdo en Deploy and run transactions.
 
-Haz clic en el botón Copiar en el lado derecho del contrato inteligente para copiar su dirección. Lo necesitaremos para usarlo en la parte frontal.
+Haz clic en el botón Copiar en el lado derecho del contrato inteligente para copiar su dirección. Lo necesitaremos para usarlo en el frontend.
 
 ![Copy](/images/image-06.png)
 
