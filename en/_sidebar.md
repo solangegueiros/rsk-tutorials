@@ -32,3 +32,7 @@
 * [Tokens](en/tokens/readme.md)
   * [How to create your first token with less than 10 lines of code](en/tokens/create-a-token.md)
   * [Create your own collectable token](en/tokens/create-a-collectable-token.md)
+
+# DeFi
+
+* [RSKSwap](en/rskswap/rskswap-with-smart-contracts.md)
