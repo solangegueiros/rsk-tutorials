@@ -70,7 +70,7 @@ Caso prefira assistir um video, eu ministrei um workshop online sobre este tutor
 
 Os passos 1 a 4 são explicados detalhadamente no tutorial: 
 
-* [Como criar um projeto utilizando Truffle e OpenZeppelin conectado à rede RSK](https://solange.dev/2020/2020-05-10-Rsk-SetupTruffleOZ/)
+* [Como criar um projeto utilizando Truffle e OpenZeppelin conectado à rede RSK](pt/setup-truffle-open-zeppelin/readme.md)
 
 # Pré-requisitos
 
@@ -81,11 +81,11 @@ Os passos 1 a 4 são explicados detalhadamente no tutorial:
 
 Os pré-requisitos 1 a 3 também são explicados detalhadamente no tutorial:
 
-* [Como criar um projeto utilizando Truffle e OpenZeppelin conectado à rede RSK](https://solange.dev/2020/2020-05-10-Rsk-SetupTruffleOZ/)
+* [Como criar um projeto utilizando Truffle e OpenZeppelin conectado à rede RSK](pt/setup-truffle-open-zeppelin/readme.md)
 
 O pré-requisito 4, instalar Metamask, conectar a testnet RSK e ganhar alguns tR-BTCs, está explicado passo a passo no tutorial: 
 
-* [Remix and Metamask with RSK testnet](https://solange.dev/2020/2020-03-27-Rsk-RemixMetamask/)
+* [Remix and Metamask with RSK testnet](pt/remix-metamask/readme.md)
 
 # Configure o projeto
 
@@ -97,7 +97,7 @@ cd colors
 ```
 
 Na pasta `colors`, execute as etapas abaixo, seguindo as instruções do tutorial já citado anteriormente:
-[Como criar um projeto utilizando Truffle e OpenZeppelin conectado à rede RSK](https://solange.dev/2020/2020-05-10-Rsk-SetupTruffleOZ/)
+[Como criar um projeto utilizando Truffle e OpenZeppelin conectado à rede RSK](pt/setup-truffle-open-zeppelin/readme.md)
 
 1. Inicialize um novo projeto Truffle;
 2. Inicialize um projeto npm;
@@ -208,17 +208,19 @@ console.log("Gas price Testnet: " + gasPriceTestnet);
 const path = require("path");
 
 module.exports = {
-  networks: { 
+  networks: {
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co', 0, 10, true, "m/44'/37310'/0'/0/"),
       network_id: 31,
-      gasPrice: Math.floor(gasPriceTestnet * 1.1),
-      networkCheckTimeout: 1e9
+      gasPrice: Math.floor(minimumGasPriceTestnet * 1.3),
+      networkCheckTimeout: 1e6,
+      timeoutBlocks: 100,
+      deploymentPollingInterval: 15e3,
     },
-  }, 
+  },
 
-  contracts_build_directory: path.join(__dirname, "app/src/contracts"), 
-  
+  contracts_build_directory: path.join(__dirname, "app/src/contracts"),
+
   compilers: {
     solc: {
       version: "0.5.7",
@@ -227,7 +229,7 @@ module.exports = {
 }
 ```
 
-Ficará deste jeito:
+Ficará deste jeito (o códido está mais atualizado do que a imagem):
 
 ![truffle-config](/images/image-08.png)
 
@@ -370,7 +372,7 @@ Aqui está a transação na RSK testnet:
 
 [0x2c2d2932a7d637fbba100b5c482c1fa1899c4fe24bd1a458976a93cee6c5ba85](https://explorer.testnet.rsk.co/tx/0x2c2d2932a7d637fbba100b5c482c1fa1899c4fe24bd1a458976a93cee6c5ba85)
 
->Uma dica: se acontecer algum problema de comunicação com a testnet entre a publicação do Migrations.sol e do Color.sol, apenas execute o comando migrate novamente, que ele executa o deploy apenas do que estiver faltando.
+> Uma dica: se acontecer algum problema de comunicação com a testnet entre a publicação do Migrations.sol e do Color.sol, apenas execute o comando migrate novamente, que ele executa o deploy apenas do que estiver faltando.
 
 **Parabéns!**
 

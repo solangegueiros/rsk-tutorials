@@ -61,22 +61,12 @@ Here is a summary of the steps to be taken to build our token:
 
 Steps 1 to 4 are explained in detail in the tutorial link below:
 
-* [Setup a project with Truffle and OpenZeppelin](/tutorials/ethereum-devs/setup-truffle-oz/)
-
-## Webinar
-
-We have run a
-[webinar](/webinars/#event-id-202005-001 "How to create your own collectible token on the RSK network").
-
-The same webinar is also available in
-[Português](https://www.youtube.com/watch?v=3gt-lmwZscE).
-
-Check out our [other webinars](/webinars).
+* [Setup a project with Truffle and OpenZeppelin](/en/truffle/setup-truffle-oz.md)
 
 ## Translations
 
 This article is also available in
-[Português](https://solange.dev/2020/2020-05-11-Rsk-CreateTokenNFT/ "Crie seu token colecionável na rede RSK").
+[Português](pt/create-token-nft/readme "Crie seu token colecionável na rede RSK").
 
 # Requirements
 
@@ -87,18 +77,18 @@ This article is also available in
 
 The requirements 1 to 3 are explained in detail in the tutorial links below:
 
-* [Setup a project with Truffle and OpenZeppelin](/tutorials/ethereum-devs/setup-truffle-oz/)
+* [Setup a project with Truffle and OpenZeppelin](/en/truffle/setup-truffle-oz.md)
 
 For requirement 4, installing Metamask, connecting to RSK testnet, and getting some tR-BTCs, this is explained step-by-step in the tutorial link below:
 
-* [Remix and Metamask with RSK testnet](/tutorials/ethereum-devs/remix-and-metamask-with-rsk-testnet/)
+* [Remix and Metamask with RSK testnet](/en/ethereum-devs/remix-and-metamask-with-rsk-testnet.md)
 
 # Setup the project
 
 Create a new folder named `colors`.
 
 Inside the folder `colors`, do the steps below, following instructions from the tutorial
-[Setup a project with Truffle and OpenZeppelin](/tutorials/ethereum-devs/setup-truffle-oz/)
+[Setup a project with Truffle and OpenZeppelin](/en/truffle/setup-truffle-oz.md)
 
 1. Initialize an empty Truffle project;
 2. Initialize an npm project;
@@ -208,10 +198,12 @@ const path = require("path");
 module.exports = {
   networks: {
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/2.0.1/'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co', 0, 10, true, "m/44'/37310'/0'/0/"),
       network_id: 31,
-      gasPrice: Math.floor(gasPriceTestnet * 1.1),
-      networkCheckTimeout: 1e9
+      gasPrice: Math.floor(minimumGasPriceTestnet * 1.3),
+      networkCheckTimeout: 1e6,
+      timeoutBlocks: 100,
+      deploymentPollingInterval: 15e3,
     },
   },
 
@@ -225,7 +217,7 @@ module.exports = {
 }
 ```
 
-It looked like this:
+It looked like this (the command is updated if you compare with the image):
 
 ![truffle-config](../../images/create-a-collectable-token/image-08.png)
 
@@ -370,7 +362,7 @@ This is the transaction at RSK testnet:
 
 [0x2c2d2932a7d637fbba100b5c482c1fa1899c4fe24bd1a458976a93cee6c5ba85](https://explorer.testnet.rsk.co/tx/0x2c2d2932a7d637fbba100b5c482c1fa1899c4fe24bd1a458976a93cee6c5ba85)
 
->A tip: if there is a communication problem with the testnet between the publication of Migrations.sol and Color.sol, just run the migrate command again, it will deploy only what is missing.
+> A tip: if there is a communication problem with the testnet between the publication of Migrations.sol and Color.sol, just run the migrate command again, it will deploy only what is missing.
 
 **Congratulations!**
 
