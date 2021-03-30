@@ -436,7 +436,7 @@ Depois das instalações, na pasta `Token`, abra o arquivo `package.json` no VSC
 
 # Crie uma wallet
 
-Para utilizar a testnet, precisamos de tR-BTC e um endereço / wallet para armazená-los. 
+Para utilizar a testnet, precisamos de tRBTC e um endereço / wallet para armazená-los. 
 A melhor forma de criar uma wallet é a partir de um mnemônico, utilizando o padrão definido em [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 
 Existem algumas formas de fazer isto.
@@ -759,11 +759,11 @@ Para consultar o saldo de uma conta, por exemplo, da primeira conta de nossa lis
 
 ![getBalance accounts 0](/images/image-37.png)
 
-O saldo é 0 e precisamos de tR-BTC para pagar o gas utilizado para publicar smart contracts e interagir com eles. Vamos obtê-los no próximo passo.
+O saldo é 0 e precisamos de tRBTC para pagar o gas utilizado para publicar smart contracts e interagir com eles. Vamos obtê-los no próximo passo.
 
 # TestNet Faucet
 
-Você pode receber alguns Testnet R-BTC em 
+Você pode receber alguns Testnet RBTC em 
 
 [RSK Testnet faucet](https://faucet.testnet.rsk.co/).
 
@@ -787,7 +787,7 @@ Você pode ver o hash da transação, por exemplo, eu fiz esta:
 
 [0x4a2bf1f65c525219020c3a1215a29453c20f4ced90575d9a7d13f8fe666d05b4](https://explorer.testnet.rsk.co/tx/0x4a2bf1f65c525219020c3a1215a29453c20f4ced90575d9a7d13f8fe666d05b4)
 
-E agora eu tenho 0.05 tR-BTC!
+E agora eu tenho 0.05 tRBTC!
 
 ## Consulte o saldo de novo
 

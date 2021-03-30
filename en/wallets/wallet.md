@@ -3,7 +3,7 @@
 
 # Create a wallet mnemonic
 
-To use testnet, we need tR-BTC and an address to store them.
+To use testnet, we need tRBTC and an address to store them.
 The best way is to create a wallet from a mnemonic, using the pattern defined at [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 
 There are a few ways to do this.
@@ -33,14 +33,14 @@ Please be aware that we are using `HDWalletProvider` with RSK Networks derivatio
 
 For more information, check [RSKIP57](https://github.com/rsksmart/RSKIPs/blob/master/IPs/RSKIP57.md).
 
-# Get R-BTC
+# Get RBTC
 
-The Smart Bitcoin (R-BTC) is the token used to pay for the execution of transactions in RSK.
+The Smart Bitcoin (RBTC) is the token used to pay for the execution of transactions in RSK.
 
 **Mainnet**
 
-For the RSK Mainnet, get R-BTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
+For the RSK Mainnet, get RBTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
 
 **Testnet**
 
-For the RSK Testnet, get tR-BTC from this [faucet](https://faucet.testnet.rsk.co/).
+For the RSK Testnet, get tRBTC from this [faucet](https://faucet.testnet.rsk.co/).

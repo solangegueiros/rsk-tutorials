@@ -55,7 +55,7 @@ Injected Web3 conecta Remix con la cuenta activa / seleccionada en Metamask.
 El tutorial [Crea tu primer smart contract en RSK usando Remix y la billetera Metamask](https://solange.dev/2020/rsk-first-smart-contract/) contiene más detalles y un contrato inteligente básico para publicar. Mira cómo:
 
 1. Configurar Metamask para conectarse a RSK testnet;
-1. Adquirir algunos R-BTC de testnet en el faucet;
+1. Adquirir algunos RBTC de testnet en el faucet;
 1. Conectar Remix con RSK Testnet;
 1. Crear un contrato inteligente en Remix;
 1. Compilar;
@@ -81,7 +81,7 @@ El tutorial [Como crear un proyecto usando Truffle y OpenZeppelin conectado a la
 2. Iniciar un proyecto usando Truffle;
 3. Instalar el HD wallet provider;
 4. Crear un mnemónico para una billetera;
-5. Adquirir algunos tR-BTC en el faucet;
+5. Adquirir algunos tRBTC en el faucet;
 6. Probar la conexión a la testnet de RSK;
 7. Consultar el precio del gas en la red;
 8. Configurar Truffle para conectarse a la red RSK;

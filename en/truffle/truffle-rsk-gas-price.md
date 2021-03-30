@@ -1,9 +1,9 @@
 # Setup the gas price to use with Truffle
 
 **Gas** is the internal pricing for running a transaction or contract. 
-When you send tokens, interact with a contract, send R-BTC, or do anything else on the blockchain, you must pay for that computation. 
+When you send tokens, interact with a contract, send RBTC, or do anything else on the blockchain, you must pay for that computation. 
 That payment is calculated as gas. 
-In RSK, this is paid in **R-BTC**.
+In RSK, this is paid in **RBTC**.
 The **minimumGasPrice** is written in the block header by miners and establishes the minimum gas price that a transaction should have in order to be included in that block.
 
 To update the **minimumGasPrice** in your project, run this query in a POSIX compatible terminal, using cURL:

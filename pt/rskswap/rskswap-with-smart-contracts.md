@@ -62,7 +62,7 @@ https://public-node.testnet.rsk.co
 
 - Symbol (optional)
 
-tR-BTC
+tRBTC
 
 - Block Explorer URL (optional)
 
@@ -74,7 +74,7 @@ Depois de configurar, feche a janela de configuração e selecione RSK Tesnet.
 
 # TestNet Faucet
 
-Você pode receber alguns Testnet R-BTC em 
+Você pode receber alguns Testnet RBTC em 
 [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/).
 
 Use seu endereço da conta do Metamask

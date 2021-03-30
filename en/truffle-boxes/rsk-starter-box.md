@@ -271,7 +271,7 @@ We need to do some tasks:
 - Setup an account / create a wallet
 - Update .secret
 - Connect to an RSK network
-- Get tR-BTC
+- Get tRBTC
 - Setup RSK network gas price
 - Deploy in the network of your choose
 
@@ -397,25 +397,25 @@ To check the balance of account[0], for example, run this command in Truffle con
 (await web3.eth.getBalance(accounts[0])).toString()
 ```
 
-If the balance is 0, your need to get some R-BTC to pay gas fees,
+If the balance is 0, your need to get some RBTC to pay gas fees,
 which will be used to publish smart contracts and interact with them.
-We shall obtain some R-BTC in the next step.
+We shall obtain some RBTC in the next step.
 
-## Get R-BTC
+## Get RBTC
 
-The Smart Bitcoin (R-BTC) is used to pay for the execution of transactions in RSK.
+The Smart Bitcoin (RBTC) is used to pay for the execution of transactions in RSK.
 
 <!-- tabs:start -->
 #### ** RSK Testnet **
 
-Get tR-BTC from [faucet](https://faucet.testnet.rsk.co/).
+Get tRBTC from [faucet](https://faucet.testnet.rsk.co/).
 
 You can get more explanations on how to do it in 
 [RSK faucet](./en/wallets/wallet-rsk-faucet.md) page.
 
 #### ** RSK Mainnet **
 
-For the RSK Mainnet, get R-BTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
+For the RSK Mainnet, get RBTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
 <!-- tabs:end -->
 
 
@@ -431,7 +431,7 @@ For my example on RSK Testnet using account `0xCd70794c2F3C657310eF13b6FF3Ec2d11
 
 ![getBalance](../../images/rsk-starter-box/image-15.png)
 
-Great! Now I have 50000000000000000, which means that I have 0.05 tR-BTC with 18 decimal place of precision.
+Great! Now I have 50000000000000000, which means that I have 0.05 tRBTC with 18 decimal place of precision.
 
 ## Exit Truffle console
 
@@ -483,7 +483,7 @@ Wait a few minutes…
 `Simple storage` is now published on the RSK network.
 
 > [!ATTENTION]
-> Make sure you have enough R-BTC to deploy it.
+> Make sure you have enough RBTC to deploy it.
 
 
 # Interact with a smart contract on RSK network

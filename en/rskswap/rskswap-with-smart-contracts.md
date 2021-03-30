@@ -68,7 +68,7 @@ https://public-node.testnet.rsk.co
 
 - Symbol (optional)
 
-tR-BTC
+tRBTC
 
 - Block Explorer URL (optional)
 
@@ -80,7 +80,7 @@ After configuring it, close the window and select the **RSK Testnet**.
 
 # TestNet Faucet
 
-You can get some Testnet R-BTC at [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/) 
+You can get some Testnet RBTC at [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/) 
 
 # Remix
 

@@ -80,7 +80,7 @@ Vou colocar alguns termos em inglês também:
 
 - Symbol / símbolo (opcional)
 
-    tR-BTC
+    tRBTC
 
 - Block Explorer URL (opcional)
 
@@ -93,7 +93,7 @@ Depois de configurar, feche a janela de configuração e selecione RSK Tesnet.
 
 ## TestNet Faucet
 
-Você pode receber alguns Testnet R-BTC em [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/).
+Você pode receber alguns Testnet RBTC em [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/).
 
 Copie seu endereço da conta do Metamask
 
@@ -109,7 +109,7 @@ Espere alguns segundos...
 
 Você pode ver o hash da transação, por examplo, eu fiz esta: [`0xf63c45dabd52e0b44f4cf15825985e9ddfe790b4323a88a3531f762a417f9011`](https://explorer.testnet.rsk.co/tx/0xf63c45dabd52e0b44f4cf15825985e9ddfe790b4323a88a3531f762a417f9011).
 
-Agora eu tenho 0.05 R-BTC!
+Agora eu tenho 0.05 RBTC!
 
 ![R-BTCs at Metamask wallet](/images/image-06.png)
 

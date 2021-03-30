@@ -318,7 +318,7 @@ web3.fromWei(eth.getBalance(eth.accounts[1]),"ether")
 
 ![balance in ethers](/images/image-19.png)
 
-Em um nó local, as contas pré-configuradas tem muito “dinheiro”! Na rede da RSK, é chamado `R-BTC`. Portanto eu tenho 1.000.000.000.000 = Um trilhão de R-BTC!
+Em um nó local, as contas pré-configuradas tem muito “dinheiro”! Na rede da RSK, é chamado `RBTC`. Portanto eu tenho 1.000.000.000.000 = Um trilhão de RBTC!
 
 ### Saldo de uma conta específica
 
@@ -330,11 +330,11 @@ web3.fromWei(eth.getBalance("0xf6e443fd1c869c6a25d18a9866f3a6c7f8dfb703"),"ether
 
 ![Balance of a specific account](/images/image-20.png)
 
-Eu não tenho nada na minha conta, então o próximo passo é transferir alguns R-BTC para esta conta.
+Eu não tenho nada na minha conta, então o próximo passo é transferir alguns RBTC para esta conta.
 
-## Transferindo R-BTC
+## Transferindo RBTC
 
-Eu tenho um trilhão de R-BTC na conta 1 e nada na conta nova. Eu quero transferir 300 bilhões da conta 1 para a nova conta:
+Eu tenho um trilhão de RBTC na conta 1 e nada na conta nova. Eu quero transferir 300 bilhões da conta 1 para a nova conta:
 
 ```js
 eth.sendTransaction({from:eth.accounts[1], to:"0xf6e443fd1c869c6a25d18a9866f3a6c7f8dfb703", value: web3.toWei(300000000000, "ether")})
@@ -356,7 +356,7 @@ Este é o resultado:
 
 ![Balances after transfer](/images/image-22.png)
 
-Maravilha! A nova conta tem 300 bilhões de R-BTC e a conta 1 tem 700 bilhões de R-BTC.
+Maravilha! A nova conta tem 300 bilhões de RBTC e a conta 1 tem 700 bilhões de RBTC.
 
 ## Saindo do Geth
 

@@ -7,12 +7,12 @@
 
 After create it, select the RSK Tesnet
 
-## Get tR-BTC
+## Get tRBTC
 
 Copy your address from Nifty.
 
-Now you can follow the instructions to get some [Testnet R-BTC](./en/wallets/wallet-rsk-faucet.md). 
+Now you can follow the instructions to get some [Testnet RBTC](./en/wallets/wallet-rsk-faucet.md). 
 
-When you come back, you will have 0.05 tR-BTC!
+When you come back, you will have 0.05 tRBTC!
 
 

@@ -24,7 +24,7 @@ A continuación se muestra un resumen de los pasos que daremos para crear nuestr
 6. Crear un mnemónico para una billetera;
 7. Configurar Truffle para conectarse a la red RSK;
 10. Utilizar la consola Truffle;
-11. Adquirir algunos tR-BTC en el faucet;
+11. Adquirir algunos tRBTC en el faucet;
 
 # Requerimientos previos
 
@@ -433,7 +433,7 @@ Después de la instalación, en la carpeta `Token`, abra el archivo `package.jso
 
 # Crea una billetera
 
-Para usar testnet, necesitamos tR-BTC y una dirección / billetera para almacenarlos.
+Para usar testnet, necesitamos tRBTC y una dirección / billetera para almacenarlos.
 La mejor manera de crear una billetera es a partir de un mnemónico, utilizando el patrón definido en
 [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 
@@ -759,11 +759,11 @@ Para verificar el saldo de una cuenta, por ejemplo, de la primera cuenta en nues
 
 ![getBalance accounts 0](/images/image-37.png)
 
-El saldo es 0 y necesitamos tR-BTC para pagar el gas utilizado para publicar contratos inteligentes e interactuar con ellos. Los obtendremos en el siguiente paso.
+El saldo es 0 y necesitamos tRBTC para pagar el gas utilizado para publicar contratos inteligentes e interactuar con ellos. Los obtendremos en el siguiente paso.
 
 # TestNet Faucet
 
-Puede recibir Testnet R-BTC en
+Puede recibir Testnet RBTC en
 
 [RSK Testnet faucet](https://faucet.testnet.rsk.co/).
 
@@ -787,7 +787,7 @@ Puede ver el hash de la transacción, por ejemplo, hice esta:
 
 [0x4a2bf1f65c525219020c3a1215a29453c20f4ced90575d9a7d13f8fe666d05b4](https://explorer.testnet.rsk.co/tx/0x4a2bf1f65c525219020c3a1215a29453c20f4ced90575d9a7d13f8fe666d05b4)
 
-¡Y ahora tengo 0.05 tR-BTC!
+¡Y ahora tengo 0.05 tRBTC!
 
 ## Volver a comprobar el saldo
 

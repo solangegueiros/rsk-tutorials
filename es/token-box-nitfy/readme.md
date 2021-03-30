@@ -233,7 +233,7 @@ Pegue su mnemónico en este archivo y guárdelo.
 
 # TestNet Faucet
 
-Puedes solicitar Testnet R-BTC en
+Puedes solicitar Testnet RBTC en
 
 [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/)
 
@@ -261,7 +261,7 @@ En este tutorial haremos la conexión a RSK Testnet
 
 ## Actualize el precio del gas
 
-**Gas** es el precio interno para ejecutar una transacción o contrato. Cuando envía tokens, interactúa con un contrato, envía R-BTC o hace cualquier otra cosa en el Blockchain, debe pagar por ese acto. Ese pago se calcula como gas. En RSK, esto se paga en **R-BTC**.
+**Gas** es el precio interno para ejecutar una transacción o contrato. Cuando envía tokens, interactúa con un contrato, envía RBTC o hace cualquier otra cosa en el Blockchain, debe pagar por ese acto. Ese pago se calcula como gas. En RSK, esto se paga en **RBTC**.
 
 El **mínimoPrecioGas** está escrito en el encabezado del bloque por los mineros y establece el precio mínimo del gas que debe tener una transacción para ser incluida en ese bloque.
 
@@ -353,7 +353,7 @@ Mira los resultados:
 
 ![accounts](/images/image-24.png)
 
-Copie la dirección de la primera cuenta para obtener R-BTC
+Copie la dirección de la primera cuenta para obtener RBTC
 
 Por ejemplo, mi dirección es `0x4417CdC73f53573999F3A0397eE9df560a2f0507`. Copie isto.
 

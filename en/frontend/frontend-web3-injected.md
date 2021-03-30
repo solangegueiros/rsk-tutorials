@@ -224,7 +224,7 @@ Then click the button `Deploy`.
 
 ![Deploy and run transactions](../../images/frontend-web3-injected/image-05.png)
 
-> Ensure that you have tR-BTC in your wallet, as this is needed to pay gas fees when deploying the smart contracts. To do so, please follow this guide: [Using Remix and Metamask with RSK testnet](/tutorials/ethereum-devs/remix-and-metamask-with-rsk-testnet/).
+> Ensure that you have tRBTC in your wallet, as this is needed to pay gas fees when deploying the smart contracts. To do so, please follow this guide: [Using Remix and Metamask with RSK testnet](/tutorials/ethereum-devs/remix-and-metamask-with-rsk-testnet/).
 
 When a smart contract is deployed with Remix, we can see it in the left panel under deploy and run transactions.
 

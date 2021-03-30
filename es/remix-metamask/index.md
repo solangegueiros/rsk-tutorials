@@ -73,7 +73,7 @@ RSK Testnet
 
 - Symbol (optional)
 
-tR-BTC
+tRBTC
 
 - Block Explorer URL (optional)
 
@@ -85,7 +85,7 @@ Después de configurarlo, cierre la ventana de configuración y selecciona RSK T
 
 # TestNet Faucet
 
-Puedes solicitar Testnet R-BTC en
+Puedes solicitar Testnet RBTC en
 
 [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/)
 
@@ -105,7 +105,7 @@ Puedes ver el hash de la transacción, como este ejemplo:
 
 [https://explorer.testnet.rsk.co/tx/0xf63c45dabd52e0b44f4cf15825985e9ddfe790b4323a88a3531f762a417f9011](https://explorer.testnet.rsk.co/tx/0xf63c45dabd52e0b44f4cf15825985e9ddfe790b4323a88a3531f762a417f9011)
 
-¡Ahora tengo 0.05 tR-BTC!
+¡Ahora tengo 0.05 tRBTC!
 
 ![R-BTCs at Metamask wallet](/images/image-06.png)
 

@@ -321,11 +321,11 @@ Agora, vamos verificar o saldo de nossa conta. Execute este comando no Truffle c
 
 ![getBalance(account) 0](/images/image-44.png)
 
-O saldo é 0 e precisamos de tR-BTC. Vamos obtê-los no próximo passo.
+O saldo é 0 e precisamos de tRBTC. Vamos obtê-los no próximo passo.
 
 # TestNet Faucet
 
-Você pode receber alguns Testnet R-BTC em 
+Você pode receber alguns Testnet RBTC em 
 
 [faucet.testnet.rsk.co](https://faucet.testnet.rsk.co/)
 
@@ -343,7 +343,7 @@ Você pode ver o hash da transação, por examplo, eu fiz esta:
 
 [0x16bedc1339a8fe59e270b0c6d5175851010bb93d0cf6c4974f1705b9ead7ee6e](https://explorer.testnet.rsk.co/tx/0x16bedc1339a8fe59e270b0c6d5175851010bb93d0cf6c4974f1705b9ead7ee6e)
 
-E agora eu tenho 0.05 tR-BTC!
+E agora eu tenho 0.05 tRBTC!
 
 ## Consulte o saldo (de novo)
 

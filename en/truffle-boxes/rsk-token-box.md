@@ -437,7 +437,7 @@ We need to do some tasks:
 
 - Setup an account
 - Update .secret
-- Get tR-BTC
+- Get tRBTC
 - Setup RSK network gas price
 - Connect to an RSK network
 - Deploy in the network of your choice
@@ -469,24 +469,24 @@ Paste the wallet mnemonic in the file `.secret`, located in the folder project, 
 
 ![update mnemonic](../../images/rsk-token-box/image-18.png)
 
-## Get R-BTC
+## Get RBTC
 
-The Smart Bitcoin (R-BTC) is used to pay for the execution of transactions in RSK.
+The Smart Bitcoin (RBTC) is used to pay for the execution of transactions in RSK.
 
 **Mainnet**
 
-For the RSK Mainnet, get R-BTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
+For the RSK Mainnet, get RBTC from [an exchange](https://www.rsk.co/#exchanges-rsk).
 
 **Testnet**
 
-For the RSK Testnet, get tR-BTC from [our faucet](https://faucet.testnet.rsk.co/).
+For the RSK Testnet, get tRBTC from [our faucet](https://faucet.testnet.rsk.co/).
 
 You can get more explanations on how to do it in 
 [RSK faucet](./en/wallets/wallet-rsk-faucet.md) page.
 
 ## Setup the gas price
 
-**Gas** is the internal pricing for running a transaction or contract. When you send tokens, interact with a contract, send R-BTC, or do anything else on the blockchain, you must pay for that computation. That payment is calculated as gas. In RSK, this is paid in **R-BTC**.
+**Gas** is the internal pricing for running a transaction or contract. When you send tokens, interact with a contract, send RBTC, or do anything else on the blockchain, you must pay for that computation. That payment is calculated as gas. In RSK, this is paid in **RBTC**.
 The **minimumGasPrice** is written in the block header by miners and establishes the minimum gas price that a transaction should have in order to be included in that block.
 
 To update the **minimumGasPrice** in our project, run this query using cURL:
@@ -614,7 +614,7 @@ Congratulations!
 
 The token is now published on the RSK network.
 
-> Make sure you have enough R-BTC to deploy it. 
+> Make sure you have enough RBTC to deploy it. 
 
 Copy the token address. You will use it later.
 

@@ -103,7 +103,7 @@ Veja um exemplo de lista de contas:
 
 ![account](/images/image-10.png)
 
-> Está sendo apresentada a unidade `ether` para os saldos, mas na realidade é `R-BTC`. Lembre-se que o Remix é uma ferramenta do Blockchain Ethereum. 
+> Está sendo apresentada a unidade `ether` para os saldos, mas na realidade é `RBTC`. Lembre-se que o Remix é uma ferramenta do Blockchain Ethereum. 
 
 # Crie um smart contract
 
