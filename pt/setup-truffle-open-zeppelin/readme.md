@@ -294,7 +294,7 @@ Este é um exemplo utilizando cURL. Execute o comando abaixo no terminal.
 Se você estiver utilizando um computador com sistema operacional Windows, não funciona no terminal, minha sugestão é utilizar o Git Bash. Para instalar, vá ao [Git site](https://git-scm.com/).
 
 ```shell
-curl https://public-node.testnet.rsk.co/2.0.1/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
+curl https://public-node.testnet.rsk.co/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
 ```
 
 Esta consulta retorna qual o número do último bloco minerado.
@@ -547,7 +547,7 @@ Consulte o valor atual do gas price para a testnet network, e salve no arquivo `
 No diretório do projeto, execute este comando cURL:
 
 ```shell
-curl https://public-node.testnet.rsk.co/2.0.1/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}' > .gas-price-testnet.json
+curl https://public-node.testnet.rsk.co/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}' > .gas-price-testnet.json
 ```
 
 ![gas price result](/images/image-25.png)
@@ -580,7 +580,7 @@ No arquivo `truffle-config.js`, inclua esta configuração na seção `network`:
 
 ```javascript
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/2.0.1/'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/'),
       network_id: 31,
       gasPrice: Math.floor(gasPriceTestnet * 1.1),
       networkCheckTimeout: 1e9
@@ -615,7 +615,7 @@ module.exports = {
       network_id: "*"
     },
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/2.0.1/'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/'),
       network_id: 31,
       gasPrice: Math.floor(gasPriceTestnet * 1.1),
       networkCheckTimeout: 1e9

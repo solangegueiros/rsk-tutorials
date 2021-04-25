@@ -295,7 +295,7 @@ Este es un ejemplo que usa cURL. Ejecute el siguiente comando en la terminal.
 Si está utilizando una computadora con sistema operativo Windows, no funciona en la terminal, mi sugerencia es usar Git Bash. Para instalar, ve al sitio de [Git](https://git-scm.com/).
 
 ```shell
-curl https://public-node.testnet.rsk.co/2.0.1/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
+curl https://public-node.testnet.rsk.co/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
 ```
 
 Esta consulta devuelve el número del último bloque extraído.
@@ -550,7 +550,7 @@ Consulte el valor actual del precio del gas para la red testnet, e guárdelo en 
 Desde el directorio del proyecto, ejecute este comando cURL:
 
 ```shell
-curl https://public-node.testnet.rsk.co/2.0.1/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}' > .gas-price-testnet.json
+curl https://public-node.testnet.rsk.co/ -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}' > .gas-price-testnet.json
 ```
 
 ![gas price result](/images/image-25.png)
@@ -584,7 +584,7 @@ Em el archivo `truffle-config.js`, incluya esta configuración en la sección `n
 
 ```javascript
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/2.0.1/'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/'),
       network_id: 31,
       gasPrice: Math.floor(gasPriceTestnet * 1.1),
       networkCheckTimeout: 1e9
@@ -619,7 +619,7 @@ module.exports = {
       network_id: "*"
     },
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/2.0.1/'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/'),
       network_id: 31,
       gasPrice: Math.floor(gasPriceTestnet * 1.1),
       networkCheckTimeout: 1e9

@@ -184,7 +184,7 @@ If you are using a Windows OS, I suggest to use the Git Bash terminal.
 Download the installer from the [Git official site](https://git-scm.com/).
 
 ```shell
-curl https://public-node.testnet.rsk.co/2.0.1/ \
+curl https://public-node.testnet.rsk.co/ \
   -X POST -H "Content-Type: application/json" \
   --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
 ```
@@ -253,7 +253,7 @@ const mnemonic = fs.readFileSync(".secret").toString().trim();
 module.exports = {
   networks: {
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/2.0.1/'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://public-node.testnet.rsk.co/'),
       network_id: 31,
       gasPrice: 0x387EE40,
       networkCheckTimeout: 1000000000
