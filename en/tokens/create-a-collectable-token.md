@@ -337,7 +337,7 @@ It looked like this:
 In the terminal, run this command:
 
 ```
-truffle migrate --network testnet
+truffle migrate --network testnet --skip-dry-run
 ```
 
 Wait a few minutes while the transactions for the smart contract deployments are sent to the blockchain.
