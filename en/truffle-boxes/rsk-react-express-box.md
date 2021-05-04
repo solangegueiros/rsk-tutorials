@@ -44,6 +44,9 @@ Navigate to the folder in the terminal.
 
 ```shell
 mkdir rsk-react-express
+```
+
+```shell
 cd rsk-react-express
 ```
 

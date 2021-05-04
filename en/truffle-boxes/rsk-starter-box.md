@@ -46,6 +46,9 @@ Navigate to the folder in the terminal.
 
 ```shell
 mkdir rsk-starter
+```
+
+```shell
 cd rsk-starter
 ```
 

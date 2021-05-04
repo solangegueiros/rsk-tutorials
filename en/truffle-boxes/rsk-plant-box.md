@@ -63,6 +63,9 @@ Navigate to the folder in the terminal.
 
 ```shell
 mkdir rsk-plant
+```
+
+```shell
 cd rsk-plant
 ```
 

@@ -62,6 +62,9 @@ Navigate to the folder in the terminal.
 
 ```shell
 mkdir rsk-token
+```
+
+```shell
 cd rsk-token
 ```
 

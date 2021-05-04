@@ -43,8 +43,13 @@ Navigate to the folder in the terminal.
 
 ```shell
 mkdir rsk-next
+```
+
+```shell
 cd rsk-next
 ```
+
+This is the result using Windows OS:
 
 ```windows-command-prompt
 C:\>cd C:\RSK
